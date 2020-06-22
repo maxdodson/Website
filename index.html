@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Dev</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/icon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top" data-spy="scroll" data-target="#navbar-1" data-offset="100">
+  <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="navbar-1">
+    <div class="container" style="max-width: 1200px;">
+      <a class="navbar-brand" href="#" title="Scroll to top">
+        <svg style="height: 33px; margin-top: 5px" viewBox="0 0 450.56 104.82" height="33" xmlns="http://www.w3.org/2000/svg">
+          <title>HackBI</title>
+          <g id="Icon">
+            <path d="M93.67,83.67A10.47,10.47,0,0,1,83.21,94.15H17A10.48,10.48,0,0,1,6.48,83.67V17.31A10.48,10.48,0,0,1,17,6.83H83.21A10.47,10.47,0,0,1,93.67,17.31Z" transform="translate(-5.23 -5.58)" style="fill:#fff2a6"></path>
+            <path d="M6.48,85.65c1.2,4.37,5.32,8.42,9.58,8.46s38.38,0,38.38,0c.44,0,14.25-4.35,21.51-27.79,3.59-11.58-.62-21.18-6.78-28.44-8.65-10.21-21.12-15.8-21.12-15.8C21.31,16.88,6.48,40.31,6.48,40.31Z" transform="translate(-5.23 -5.58)" style="fill:#b45859"></path>
+            <path d="M30.68,50.5s2.9-4.28,7.7-3.56,9.77,6.82,9.59,9.31-.38,4.51-.38,4.51S33.48,64.33,30.68,50.5" transform="translate(-5.23 -5.58)" style="fill:#e4cf38"></path>
+            <path d="M30.68,50.5s-2.72,10,3.49,12,10.35,2.89,13.42-1.75c0,0-13.68,3.56-16.91-10.26" transform="translate(-5.23 -5.58)" style="fill:#e4cf38"></path>
+            <path d="M30.68,50.5s-2.31,9,3.49,12C37,64,44.06,65.33,47.59,60.76c0,0-13.68,3.56-16.91-10.26" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M30.68,50.5s5.12-6.88,12.21-1.64,4.72,8.63,4.7,11.9c0,0,6.85,9.83,15.14,8.41s10.9-7.86,10.35-15.29S64.14,41.44,55.53,43.51,46.7,43.56,45,37.92,36.21,23,24.33,27.33,18.53,44,20.43,47.77s7,4.15,10.25,2.73" transform="translate(-5.23 -5.58)" style="fill:#353535"></path>
+            <path d="M30.68,50.5s5.12-6.88,12.21-1.64,4.72,8.63,4.7,11.9c0,0,6.85,9.83,15.14,8.41s10.9-7.86,10.35-15.29S64.14,41.44,55.53,43.51,46.7,43.56,45,37.92,36.21,23,24.33,27.33s-6.46,17.21-3.9,20.44A8.89,8.89,0,0,0,30.68,50.5Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M27.26,35.22S38.47,33.33,35,41.33c-1.4,3.26-7,.36-8.14-.95s-1.45-4.51.36-5.16" transform="translate(-5.23 -5.58)" style="fill:#e5e5e5"></path>
+            <path d="M27.26,35.22S38.47,33.33,35,41.33c-1.4,3.26-7,.36-8.14-.95S25.45,35.87,27.26,35.22Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M64.8,56.91s-4.61-11.76-9-2.81c-1.57,3.17,4.14,5.39,5.86,5.74,2.4.48,3.37-.93,3.18-2.93" transform="translate(-5.23 -5.58)" style="fill:#e5e5e5"></path>
+            <path d="M64.8,56.91s-4.61-11.76-9-2.81c-1.57,3.17,4.14,5.39,5.86,5.74C64,60.32,65,58.91,64.8,56.91Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M48.05,22.12C21.31,16.88,6.48,40.31,6.48,40.31V85.65c1.2,4.37,5.32,8.42,9.58,8.46s38.38,0,38.38,0c.44,0,14.25-4.35,21.51-27.79,3.59-11.58-.62-21.18-6.78-28.44" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M69.17,37.92C73,36.44,71,22.12,67.91,19.53c0,0-11.59-2.25-19.86,2.59C48.05,22.12,60.52,27.71,69.17,37.92Z" transform="translate(-5.23 -5.58)" style="fill:#e07380;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M93.67,83.67A10.47,10.47,0,0,1,83.21,94.15H17A10.48,10.48,0,0,1,6.48,83.67V17.31A10.48,10.48,0,0,1,17,6.83H83.21A10.47,10.47,0,0,1,93.67,17.31Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2.5px"></path>
+          </g>
+          <g id="Text" style="fill: white">
+            <path d="M154,14.63h14.61V87.37H154V57H127V87.37H112.41V14.63H127V42.48h27Z" transform="translate(-5.23 -5.58)"></path>
+            <polygon points="206.62 9.16 197.58 9.16 167.03 82.04 182.7 82.04 201.6 39.8 219.01 82.04 234.77 82.04 206.62 9.16"></polygon>
+            <path d="M286.39,32.07C272.2,23,250.8,31.45,250.8,50.86c0,20.34,22.65,28.5,36.42,18.17l9.39,10.64a38.22,38.22,0,0,1-24.21,8.67,37.75,37.75,0,0,1-37.88-37.48c0-20.65,17-37.47,37.88-37.47a38.4,38.4,0,0,1,23.38,8Z" transform="translate(-5.23 -5.58)"></path>
+            <path d="M321.39,54l-5.63,5.71V87.27H301.15V14.53h14.61V38l21.39-23.48h19.72L331.3,43l26.2,44.27H340.07Z" transform="translate(-5.23 -5.58)"></path>
+            <path d="M388.67,14.63a21.38,21.38,0,0,1,21.4,21.31,20.61,20.61,0,0,1-3.76,12,22,22,0,0,1-13.46,39.48H368.74V14.63Zm-.62,28.79A8.53,8.53,0,0,0,396.5,35a8.34,8.34,0,0,0-8.45-8.21h-6.37V43.42ZM392.64,75a8.78,8.78,0,1,0,0-17.56H382V75Z" transform="translate(-5.23 -5.58)"></path>
+            <path d="M441,29.08V72.82h7.72V87.37H418.52V72.82h7.83V29.08h-7.83V14.53h30.16V29.08Z" transform="translate(-5.23 -5.58)"></path>
+          </g>
+        </svg>
+      </a>
+      <a href="#faq" type="button" class="btn btn-light btn-md text-nowrap cta d-md-none a-colored" id="cta-collapsed">
+        Register
+        <span class="cta-arrow">
+          ➝
+        </span>
+      </a>
+      <button class="hamburger hamburger--squeeze navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home<span class="sr-only">(current page)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#faq">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="team.html">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Last Year</a>
+          </li>
+        </ul>
+      </div>
+      <a href="#faq" type="button" class="btn btn-light btn-md text-nowrap cta d-none d-md-block a-colored" id="cta-uncollapsed">
+        Register
+        <span class="cta-arrow">
+          ➝
+        </span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="jumbotron jumbotron-fluid text-center" id="home">
+    <video autoplay muted poster="img/register.jpg" preload="none" loop></video>
+    <div class="text-wrapper">
+      <!--<h1>
+        <span id="sp1">H</span><span id="sp1">A</span><span id="sp1">C</span><span id="sp1" style="margin-left: -5px;">K&hairsp;</span><span id="sp2">B</span><span id="sp2" style="margin-left: -5px;">I</span>
+      </h1>-->
+      <svg class="main-text" viewBox="100 0 350 90" xmlns="http://www.w3.org/2000/svg">
+        <!-- IF KEPT, MAKE SPACE MORE DEFINED & REMOVE JAAPOKKI FONT IN HEAD -->
+        <!-- REMOVE id="Text" and change the SVG (this one and logo) to start as white -- WILL CHANGE JS -->
+        <title>HackBI</title>
+        <defs>
+          <filter id="shadow" height="120%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> 
+            <feOffset dx="0" dy="1"/>
+            <feComponentTransfer>
+              <feFuncA type="linear" slope="1.25"/>
+            </feComponentTransfer>
+            <feMerge> 
+              <feMergeNode/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <g filter="url(#shadow)">
+          <path d="M154,14.63h14.61V87.37H154V57H127V87.37H112.41V14.63H127V42.48h27Z" transform="translate(-5.23 -5.58)" fill="white"></path>
+          <polygon points="206.62 9.16 197.58 9.16 167.03 82.04 182.7 82.04 201.6 39.8 219.01 82.04 234.77 82.04 206.62 9.16" fill="white"></polygon>
+          <path d="M286.39,32.07C272.2,23,250.8,31.45,250.8,50.86c0,20.34,22.65,28.5,36.42,18.17l9.39,10.64a38.22,38.22,0,0,1-24.21,8.67,37.75,37.75,0,0,1-37.88-37.48c0-20.65,17-37.47,37.88-37.47a38.4,38.4,0,0,1,23.38,8Z" transform="translate(-5.23 -5.58)" fill="white"></path>
+          <path d="M321.39,54l-5.63,5.71V87.27H301.15V14.53h14.61V38l21.39-23.48h19.72L331.3,43l26.2,44.27H340.07Z" transform="translate(-5.23 -5.58)" fill="white"></path>
+          <path d="M388.67,14.63a21.38,21.38,0,0,1,21.4,21.31,20.61,20.61,0,0,1-3.76,12,22,22,0,0,1-13.46,39.48H368.74V14.63Zm-.62,28.79A8.53,8.53,0,0,0,396.5,35a8.34,8.34,0,0,0-8.45-8.21h-6.37V43.42ZM392.64,75a8.78,8.78,0,1,0,0-17.56H382V75Z" transform="translate(-5.23 -5.58)" fill="white"></path>
+          <path d="M441,29.08V72.82h7.72V87.37H418.52V72.82h7.83V29.08h-7.83V14.53h30.16V29.08Z" transform="translate(-5.23 -5.58)" fill="white"></path>
+        </g>
+      </svg>
+      <br>
+      <h5 id="lead1" class="lead-text">24-hour hackathon at Bishop Ireton High School</h5>
+      <br>
+      <h2 id="lead2" class="lead-text"><b>December 7-8</b></h2>
+      <br>
+      <button type="button" class="btn btn-outline-light btn-lg text-nowrap mainbtn">Register</button>
+      <button type="button" class="btn btn-outline-light btn-lg text-nowrap mainbtn">Volunteer</button>
+    </div>
+    <div id="arrow" class="text-center d-none d-md-block">
+      <a href="#faq" title="Scroll down" id="arrow-svg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="31" viewBox="0 0 23.94 14.89">
+          <path d="M14.77,23.8,5.18,14.21a2.27,2.27,0,0,1,0-3.19l.8-.8a2.27,2.27,0,0,1,3.19,0l7.31,7.32,7.32-7.32a2.27,2.27,0,0,1,3.19,0l.8.8a2.27,2.27,0,0,1,0,3.19L18.22,23.8a2.24,2.24,0,0,1-1.72.65A2.25,2.25,0,0,1,14.77,23.8Z" transform="translate(-4.53 -9.56)" fill="#FFFFFF" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="section faq jumbotron-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 header" id="faq">
+          <h1>Frequently Asked Questions</h1>
+          <h4>Don't see your question here? Click <a href="#contact">here</a> to ask it!</h4>
+        </div>
+        <div class="col-sm-6 col-12">
+          <div class="qa hideme">
+            <h3>What is HackBI?</h3>
+            <h4>HackBI is a student-run hackathon at Bishop Ireton High School, where you will have 24 hours to learn
+              how to code (or just learn something new) and make your idea come to life!</h4>
+          </div>
+          <div class="qa hideme">
+            <h3>What is a hackathon?</h3>
+            <h4>Hackathons are fun events in which teams and individuals create their own custom programming projects
+              to showcase and potentially win prizes for!</h4>
+          </div>
+          <div class="qa hideme">
+            <h3>Why should I come to HackBI?</h3>
+            <h4>Whether you've never programmed before or have been doing it for a few years, HackBI will be a great
+              place to better your skills, learn new things, and have a lot of fun doing so! Plus, we'll have games,
+              raffles, free food and more!</h4>
+          </div>
+          <div class="qa hideme">
+            <h3>Do I need any programming experience to come?</h3>
+            <h4>No! HackBI is the perfect place to learn! We'll have workshops throughout the event to teach you new
+              things!</h4>
+          </div>
+          <div class="qa hideme">
+            <h3>Are there prizes?</h3>
+            <h4>Of course! There will be prizes for each individual in a team (4 people max). The grand prize will be
+              a paid summer internship at <a href="https://deciphernow.com/" target="_blank">Decipher Technology Studios</a>!</h4>
+          </div>
+          <div class="qa hideme">
+            <h3>What if I don't have a laptop?</h3>
+            <h4>If you're in middle school, computers will be provided. <br /><br />Otherwise, we have a limited number
+              of computers to lend out.
+              Let us know ahead of time <a href="#contact">here</a>!</h4>
+          </div>
+          <!--
+            <div class="qa hideme">
+              <h3>When does registration end?</h3>
+              <h4>Registration ends October 14, but make sure to sign up plenty before then!</h3>
+            </div>
+          -->
+        </div>
+        <div class="col-sm-6 col-12">
+          <div class="qa hideme">
+            <h3>Who can attend HackBI?</h3>
+            <h4>HackBI is open to:
+              <ul>
+                <li>all high schoolers for both days, December 7-8 (10 AM Sat.–12 PM Sun.)</li>
+                <li>eighth graders for December 7 only (10 AM–10 PM)</li>
+                <li>If you're an adult and would like to come, consider <a href="register">volunteering</a>!</li>
+              </ul>
+          </div>
+          <div class="qa hideme">
+            <h3>How much does HackBI cost?</h3>
+            <h4>HackBI will be completely free!</h4>
+          </div>
+          <div class="qa hideme">
+            <h3>What about food?</h3>
+            <h4>We'll provide lots of food for the event! No need to bring any money for meals.</h4>
+          </div>
+          <div class="qa hideme">
+            <h3>What if I have dietary concerns?</h3>
+            <h4>If you have a specific dietary concern, please indicate it on the registration form and we'll
+              glady accomodate you!
+            </h4>
+          </div>
+          <div class="qa hideme">
+            <h3>Do I need to come with a team?</h3>
+            <h4>You can come with a pre-determined team if you want. If you're coming individually, there will be an
+              opportunity at the beginning to join a team if you'd like.</h4>
+          </div>
+          <div class="qa hideme">
+            <h3>What should I bring?</h3>
+            <h4>You'll need a laptop, charger, and something to sleep with (or just a lot of caffeine).
+              <br /><br />
+              If you're in middle school, you don't need to bring anything!
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section workshops jumbotron-fluid text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 header" id="workshops">
+          <h1>Workshops</h1>
+          <h4>Have a recommendation? Let us know <a href="#contact">here</a>!</h4>
+        </div>
+      </div>
+      <div class="card-columns">
+        <div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn how to use HTML and CSS to design a website!</p></div></div>
+					<img data-src="img/html_css.png" class="img-responsive card-img-top" style="width: 140px; height: 101px; margin-bottom: -10px;">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>HTML & CSS</strong></p>
+					</div>
+				</div>
+			
+				<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn how to make your own skills for the Alexa platform which runs on Echo and other smart devices!</p></div></div>
+					<img data-src="img/alexa.png" class="img-responsive card-img-top" style="width: 100px; height: 112px; margin-bottom: -10px">
+					<hr />
+					<div class="card-body">
+						<p class="card-title" style="padding: 0 8px 0 8px"><strong>Amazon Alexa</strong></p>
+					</div>
+				</div>
+			
+				<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Make your website more advanced with JavaScript or use it on its own!</p></div></div>
+					<img data-src="img/javascript.png" class="img-responsive card-img-top" style="width: 57px; height: 77px; margin-bottom: 0">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>JavaScript</strong></p>
+					</div>
+				</div>
+			
+				<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Use Photoshop to edit photos professionally!</p></div></div>
+					<img data-src="img/photoshop.png" class="img-responsive card-img-top" style="width: 133px; height: 39px; margin-top: 30px">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>Photoshop</strong></p>
+					</div>
+				</div>
+	
+				<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn Python, an easy to learn yet robust language used by beginners and experts alike!</p></div></div>
+					<img data-src="img/python.png" class="img-responsive card-img-top" style="width: 130px; height: 38px; margin-top: 25px; margin-bottom: 0">
+					<hr />
+					<div class="card-body" id="evb">
+						<p class="card-title"><strong>Python</strong></p>
+					</div>
+				</div>
+			
+				<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Create basic apps easily with App Inventor!</p></div></div>
+					<img data-src="img/appinventor.png" class="img-responsive card-img-top" style="width: 180px; height: 62px; margin-bottom: 0">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>App Inventor</strong></p>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn how to program with one of the most popular programming languages!</p></div></div>
+					<img data-src="img/java.png" class="img-responsive card-img-top" style="width: 50px; height: 80px; margin-top: 20px; margin-bottom: 0">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>Java</strong></p>
+					</div>
+				</div>
+			
+				<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn Java in a straightforward and visual way!</p></div></div>
+					<img data-src="img/alice.png" class="img-responsive card-img-top" style="width: 130px; height: 53px; margin-bottom: 0">
+					<hr />
+					<div class="card-body" id="evb">
+						<p class="card-title"><strong>Alice</strong></p>
+					</div>
+				</div>
+			
+				<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Use services from Google Cloud Platform to add functionality to your programs!</p></div></div>
+					<img data-src="img/gcp.png" class="img-responsive card-img-top" style="width: 150px; height: 95px; margin-bottom: 0">
+					<hr />
+					<div class="card-body" id="evb">
+						<p class="card-title"><strong>Google Cloud Platform</strong></p>
+					</div>
+				</div>
+			
+				<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Use Firebase to develop seamless and scalable apps!</p></div></div>
+					<img data-src="img/firebase.png" class="img-responsive card-img-top" style="width: 190px; height: 64px; margin-bottom: 0">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>Firebase</strong></p>
+					</div>
+				</div>
+			
+				<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Use Amazon Web Services to make Alexa skills more advanced!</p></div></div>
+					<img data-src="img/aws.png" class="img-responsive card-img-top" style="width: 155px; height: 66px; margin-top: 20px; margin-bottom: 0">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>Amazon Web Services</strong></p>
+					</div>
+				</div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--
+  <div class="section faq jumbotron-fluid" id="home">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 header">
+          <h1>Robotics</h1>
+          <h4>Build, code, and control a custom robot!</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <img data-src="img/robot3.png" class="img-responsive" style="width: auto">
+        </div>
+        <div class="col-4">
+          <img data-src="img/course.png" class="img-responsive">
+        </div>
+        <div class="col-4">
+          <img data-src="img/robot1.png" class="img-responsive">
+        </div>
+      </div>
+      <h5>Supplies are limited, so sign up if you're interested!</h5>
+      <button class="btn btn-primary pad" type="button" data-toggle="modal" data-target="#roboticsModal">I'm interested</button>
+    </div>
+  </div>
+  -->
+  
+  <div class="modal fade" id="roboticsModal" tabindex="-1" role="dialog" aria-labelledby="Robotics Signup Dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content" style="color: black">
+        <div class="modal-header">
+          <h2 class="modal-title"><strong>Robotics Signup</strong></h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" style="font-size: 36pt;">×</span>
+          </button>
+        </div>
+        <div class="modal-body" style="font-size: 1.3rem;">
+          <form>
+            <div class="form-group">
+              <label>Name</label>
+              <input id="namei" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input id="emaili" class="form-control" placeholder="Email">
+            </div>
+          </form>
+          <h6 class="qualifier">You must be registered for HackBI first</h6>
+          <button class="btn btn-primary" type="submit" onclick="javascript:notifSubmit(); return false;" style="float:right">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section jumbotron-fluid">
+    <div class="container" style="width: 100%; padding: 0;">
+      <div class="row" id="contact">
+        <div class="col-xs-12 col-sm-6 col-lg-5 text-center" style="padding: 0;">
+          <div id="map" style="height: 460px; border: 1px solid white">MAP</div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-5 offset-lg-1 header contact" data-offset="150">
+          <h1>Contact Us</h1>
+          <form id="contactform" style="font-size: 1.2rem;">
+            <div class="form-group">
+              <label>Name</label>
+              <input id="namef" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input id="emailf" class="form-control" type="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label>Question</label>
+              <textarea id="contactq" class="form-control" rows="2" placeholder="Question" style="resize: vertical"></textarea>
+            </div>
+            <button id="contactsubmit" class="btn btn-primary" type="submit" onclick="javascript:contactSubmit(); return false;">Submit</button>
+            <button id="contactclear" class="btn btn-outline-secondary" type="reset" onclick="javascript:clearForm(); return false;" style="float: right">Clear</button>
+          </form>
+          <h6 class="text-center qualifier">Or email us at
+            <a style="color: inherit" href="mailto:HackBI@bishopireton.org">HackBI@bishopireton.org</a>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section sponsors jumbotron-fluid text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 header">
+          <h1>Sponsors</h1>
+          <h4>Interested in being a sponsor? Reach out to us <a href="#contact">here</a>!</h4>
+          <br>
+        </div>
+        <div class="col-12 logos">
+          <a href="https://deciphernow.com" target="_blank"><img data-src="img/decipher.png" title="Decipher Technology Studios"></a>
+          <a href="https://www.redhorsecorp.com/" target="_blank"><img data-src="img/redhorse.png" title="Redhorse Corporation"></a>
+          <a href="https://gen.xyz" target="_blank"><img data-src="img/xyz.png" title="XYZ"></a>
+          <a href="https://www.bishopireton.org/parents/pto" target="_blank"><img data-src="img/bi-logo.png" title="Bishop Ireton High School PTO"></a>
+          <img data-src="img/ibg.png" title="Innovative Business Group">
+          <a href="https://www.thinkfun.com" target="_blank"><img data-src="img/think-fun.png" title="ThinkFun"></a>
+          <a href="https://www.brandmakers.com" target="_blank"><img data-src="img/brandmakers.png" title="Brand Makers"></a>
+          <a href="https://ultrapress.com" target="_blank"><img data-src="img/ultra-press.png" title="UltraPress"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="container text-center">
+      <a href="https://maps.google.com/?q=Bishop+Ireton+High+School,+201+Cambridge+Rd,+Alexandria,+VA+22314" target="_blank" rel="nofollow">
+        Bishop Ireton High School
+      </a>
+      <br>
+      <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"  target="_blank" rel="nofollow">MLH Code of Conduct</a>
+      <br>
+      <a class="social" href="https://www.facebook.com/officialhackbi/" target="_blank">
+        <img data-src="img/facebook.svg" title="Facebook">
+      </a>
+      <a class="social" href="https://www.twitter.com/HackBIOfficial" target="_blank">
+        <img data-src="img/twitter.svg" title="Twitter">
+      </a>
+      <a class="social" href="https://pbs.twimg.com/media/DYX2hoVWsAIMxvN.jpg" target="_blank">
+        <img data-src="img/snapchat.svg" title="Snapchat">
+      </a>
+      <a class="social" href="https://youtu.be/p_xg-GK7heY" target="_blank">
+        <img data-src="img/youtube.svg" title="YouTube">
+      </a>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="common.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script defer src="jquery.lazyloadxt.js"></script>
+
+  <script defer type="text/javascript">
+		var map;
+		function initMap() {
+			map = new google.maps.Map(
+				document.getElementById('map'), {
+					zoom: 16,
+					center: {
+						lat: 38.8092594,
+						lng: -77.0811094
+					},
+					styles: [{
+						"elementType": "geometry.fill",
+						"stylers": [{
+							"visibility": "on"
+						}]
+					},
+					{
+						"featureType": "administrative.land_parcel",
+						"stylers": [{
+							"visibility": "off"
+						}]
+					},
+					{
+						"featureType": "administrative.neighborhood",
+						"stylers": [{
+							"visibility": "off"
+						}]
+					},
+					{
+						"featureType": "landscape",
+						"stylers": [
+							{
+								"saturation": -50
+							},
+							{
+								"lightness": 60
+							}
+						]
+				},
+					{
+						"featureType": "landscape.man_made",
+						"elementType": "geometry.fill",
+						"stylers": [{
+								"color": "#efe9e1"
+							},
+							{
+								"saturation": -35
+							}
+						]
+					},
+					{
+						"featureType": "poi",
+						"elementType": "labels.text",
+						"stylers": [{
+							"visibility": "on"
+						}]
+					},
+					{
+						"featureType": "poi.business",
+						"stylers": [{
+							"visibility": "off"
+						}]
+					},
+					{
+						"featureType": "road",
+						"elementType": "labels",
+						"stylers": [{
+							"visibility": "on"
+						}]
+					},
+					{
+						"featureType": "road.arterial",
+						"elementType": "geometry.stroke",
+						"stylers": [{
+							"weight": 2
+						}]
+					},
+					{
+						"featureType": "road.highway",
+							"elementType": "geometry.fill",
+							"stylers": [
+									{
+											"color": "#ef8c25"
+									},
+									{
+											"lightness": 40
+									}
+							]
+					},
+					{
+						"featureType": "road.highway",
+						"elementType": "geometry.fill",
+						"stylers": [
+							{
+									"color": "#ef8c25"
+							},
+							{
+									"lightness": 40
+							}
+					]
+					},
+					{
+						"featureType": "road.highway",
+						"elementType": "geometry.stroke",
+						"stylers": [{
+							"visibility": "off"
+					}
+						]
+					},
+					{
+						"featureType": "water",
+						"elementType": "labels.text",
+						"stylers": [{
+							"visibility": "off"
+						}]
+					}
+				]
+			});
+			var marker = new google.maps.Marker({
+				position: {
+					lat: 38.8092500,
+					lng: -77.0809000
+				},
+				map: map
+			});
+		}
+	</script>
+	<script defer src="__https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"></script>
+</body>
+
+</html>
