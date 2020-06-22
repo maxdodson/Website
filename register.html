@@ -72,19 +72,6 @@
 	    outline: none !important;
     }
 
-    #timesdiv:hover {
-        text-decoration: underline;
-        background-color: #efefef !important;
-    }
-    #times > span {
-        text-decoration-line: underline;
-        text-decoration-color: #f6f6f6;
-        -webkit-user-select: none;  
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
     .eventbrite_embed iframe {
         width: 95%;
         display: block;
@@ -328,18 +315,6 @@
                                 }
                             });
                         </script>
-                        <!--
-                        <div id="timesdiv" title="See times for HackBI" style="padding: 4px; background-color: #f6f6f6; border-radius: 3px; font-size: 14px; width: 100px; margin: 12px auto 0 auto; cursor: pointer">
-                            See times
-                            <div id="times" style="display: none; font-size: 10pt; padding-bottom: 5px;">
-                                <span>
-                                Middle School: Dec. 7 (10 AM–10 PM)
-                                <br>
-                                High School: Dec. 7–8 (10 AM Sat–12 PM Sun)
-                                </span>
-                            </div>
-                        </div>
-                        -->
 
                         <hr style="width: 180px;">
 
@@ -446,15 +421,6 @@
     <script type="text/javascript" src="common.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script>
-        /* $('#timesdiv').click(function() {
-            if ($("#times").is( ":visible" )) {
-                $('#timesdiv').css('width', '100px');
-            } else {
-                $('#timesdiv').css('width', '330px');
-            }
-            $('#times').toggle();
-        }); */
-
         $("[data-toggle=popover]").popover();
         function xBind() {
             $('.x').unbind("click");
