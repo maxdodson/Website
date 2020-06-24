@@ -482,18 +482,13 @@
         ajax_response = null;
         pattern = new RegExp('[a-zA-Z]{2,}\_[a-zA-Z]{2,}.+');
         $("#file-1").change(function() {
-            try {
-                for (var i=0; i < this.files.length; i++) {
-                    if (!(pattern.test(this.files[i].name))) {
-                        alert('File "' + this.files[i].name + '" is not named properly.\n\nPlease name your files: "First Name_Last Name" and please do not abbreviate. Extensions and numbers at the end are OK.');
-                        continue;
-                    }
-                    $('.content').append($('#file-template').html().replace('<div class="name"></div>','<div class="name" data-file-size="' + this.files[i].size + '">' + this.files[i].name + '</div>'));
-                    uploaded_files.push(this.files[i]);
-                }
-            } catch {
-                alert("Something didn't work quite right. Try again.");
-                location.reload();
+            for (var i=0; i<this.files.length; i++) {
+                var temp = $($('#file-template').html());
+                temp.attr('data-file-size', this.files[i].size);
+                temp.attr('data-file-name', this.files[i].name);
+                temp.find('.name').text(this.files[i].name);
+                temp.appendTo($('.content'));
+                uploaded_files.push(this.files[i]);
             }
         });
         function dropHandler(ev) {
@@ -502,23 +497,19 @@
             $('.box').css('border-color','#df888c');
             $('.box').css('background-color','rgba(240, 220, 222, .4)');
             if (ev.dataTransfer.items) {
-                for (var i = 0; i < ev.dataTransfer.items.length; i++) {
+                for (var i=0; i<ev.dataTransfer.items.length; i++) {
                     if (ev.dataTransfer.items[i].kind === 'file') {
                         var file = ev.dataTransfer.items[i].getAsFile();
-                        if (!(pattern.test(file.name))) {
-                            alert('File "' + file.name + '" is not named properly.\n\nPlease name your files: "First Name_Last Name" and please do not abbreviate. Extensions and numbers at the end are OK.');
-                            continue;
-                        }
-                        $('.content').append($('#file-template').html().replace('<div class="name"></div>','<div class="name" data-file-size="' + file.size + '">' + file.name + '</div>'));
+                        var temp = $($('#file-template').html());
+                        temp.attr('data-file-size', file.size);
+                        temp.attr('data-file-name', file.name);
+                        temp.find('.name').text(file.name);
+                        temp.appendTo($('.content'));
                         uploaded_files.push(file);
                     }
                 }
             } else {
-                for (var i = 0; i < ev.dataTransfer.files.length; i++) {
-                    if (!(pattern.test(ev.dataTransfer.files[i].name))) {
-                        alert('File "' + ev.dataTransfer.files[i].name + '" is not named properly.\n\nPlease name your files: "First Name_Last Name" and please do not abbreviate. Extensions and numbers at the end are OK.');
-                        continue;
-                    }
+                for (var i=0; i<ev.dataTransfer.files.length; i++) {
                     var temp = $($('#file-template').html());
                     temp.attr('data-file-size', ev.dataTransfer.files[i].size);
                     temp.attr('data-file-name', ev.dataTransfer.files[i].name);
