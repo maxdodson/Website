@@ -174,11 +174,12 @@
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    .form-control:hover, .form-control:focus, .form-control:active {
+    .form-control:hover:not(.is-invalid):not(.is-valid), .form-control:focus:not(.is-invalid):not(.is-valid), .form-control:active:not(.is-invalid):not(.is-valid) {
         box-shadow: none !important;
         border-color: darkgray;
     }
     .form-control:focus, .form-control:active {
+        box-shadow: none !important;
         border-width: 1.5px;
     }
 </style>
@@ -435,6 +436,45 @@
                 }
                 $(this).parent().remove();
             });
+        }
+
+        function renamePrompt() {
+            var ih = $("#registrationModal .modal-body").height();
+            $("#registrationModal .modal-header").remove();
+            $("#registrationModal .modal-footer p").remove();
+            $("#registrationModal .modal-body").css('text-align','left');
+            $("#registrationModal .modal-body").html('<h2><strong>One last thing!</strong></h2><p>We need to rename your files using your name</p><form><div class="form-group"><label>Enter your name</label><input class="form-control" placeholder="First and last name" id="rename-field"><div class="invalid-feedback">Please provide a valid full name (only letters, spaces and hyphens are allowed)</div><small class="form-text text-muted">Use the same name you used to register</small></div></form>');
+            $('#registrationModal').data('bs.modal')._config.backdrop = 'static';
+            var fh = $("#registrationModal .modal-body").outerHeight();
+            $("#registrationModal .modal-body").outerHeight(ih);
+            $("#registrationModal .modal-body").animate({height: fh});
+        }
+
+        function doResubmit() {
+            var name = $('#rename-field').val();
+            var name_pattern = /^[a-zA-Z-]{2,}(\s[a-zA-Z-]{2,})+$/;
+            if (name_pattern.test(name)) {
+                $('#rename-field').removeClass('is-invalid');
+                $('#rename-field').addClass('is-valid');
+            } else {
+                $('#rename-field').removeClass('is-valid');
+                $('#rename-field').addClass('is-invalid');
+                $('#rename-field').unbind();
+                $('#rename-field').on("input", doResubmit);
+            }
+        }
+
+        function doSubmit() {
+            try {
+                uploaded_files.forEach(function(item) {
+                    if (!(pattern.test(item.name))) {
+                        renamePrompt();
+                        return;
+                    }
+                });
+            } catch {
+                alert("Something didn't work quite right. Try again.");
+            }
         }
 
         uploaded_files = [];
