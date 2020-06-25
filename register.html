@@ -422,7 +422,6 @@
     <script type="text/javascript" src="common.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script>
-        $("[data-toggle=popover]").popover();
         function xBind() {
             $('.x').unbind("click");
             $('.x').one("click", function () {
@@ -450,37 +449,47 @@
             $("#registrationModal .modal-body").animate({height: fh});
         }
 
-        function doResubmit() {
+        function testName() {
             var name = $('#rename-field').val();
             var name_pattern = /^[a-zA-Z-]{2,}(\s[a-zA-Z-]{2,})+$/;
             if (name_pattern.test(name)) {
                 $('#rename-field').removeClass('is-invalid');
                 $('#rename-field').addClass('is-valid');
+                return true;
             } else {
                 $('#rename-field').removeClass('is-valid');
                 $('#rename-field').addClass('is-invalid');
                 $('#rename-field').unbind();
-                $('#rename-field').on("input", doResubmit);
+                $('#rename-field').on("input", testName);
             }
         }
 
+        pattern = new RegExp('[a-zA-Z-]{2,}\_[a-zA-Z-]{2,}.+');
+        var prompted = false;
         function doSubmit() {
-            try {
+            if (prompted) {
+                if (testName()) {
+                    var fileName = $('#rename-field').val().replace(/\s/g,"_");
+                    for (var i=0; i<uploaded_files.length; i++) {
+                        uploaded_files[i].name = `${fileName} (${i+1})`;
+                    }
+                    doPost();
+                }
+            } else {
                 uploaded_files.forEach(function(item) {
                     if (!(pattern.test(item.name))) {
                         renamePrompt();
+                        prompted = true;
                         return;
                     }
                 });
-            } catch {
-                alert("Something didn't work quite right. Try again.");
+                doPost();
             }
         }
 
         uploaded_files = [];
         ajax_responses = 0;
         ajax_response = null;
-        pattern = new RegExp('[a-zA-Z]{2,}\_[a-zA-Z]{2,}.+');
         $("#file-1").change(function() {
             for (var i=0; i<this.files.length; i++) {
                 var temp = $($('#file-template').html());
@@ -488,7 +497,7 @@
                 temp.attr('data-file-name', this.files[i].name);
                 temp.find('.name').text(this.files[i].name);
                 temp.appendTo($('.content'));
-                uploaded_files.push(this.files[i]);
+                uploaded_files.push({"name":this.files[i].name, "file":this.files[i]});
             }
         });
         function dropHandler(ev) {
@@ -505,7 +514,7 @@
                         temp.attr('data-file-name', file.name);
                         temp.find('.name').text(file.name);
                         temp.appendTo($('.content'));
-                        uploaded_files.push(file);
+                        uploaded_files.push({"name":file.name, "file":file});
                     }
                 }
             } else {
@@ -515,11 +524,10 @@
                     temp.attr('data-file-name', ev.dataTransfer.files[i].name);
                     temp.find('.name').text(ev.dataTransfer.files[i].name);
                     temp.appendTo($('.content'));
-                    uploaded_files.push(ev.dataTransfer.files[i]);
+                    uploaded_files.push({"name":ev.dataTransfer.files[i].name, "file":ev.dataTransfer.files[i]});
                 }
             }
         }
-        
         function dragOverHandler(ev) {
             ev.preventDefault();
         }
@@ -538,10 +546,10 @@
             $('#submitbtn').html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
             $('#submitbtn').prop('disabled', 'true');
             try {
-                for (var i = 0; i < uploaded_files.length; i++) {
-                    var file = uploaded_files[i];
+                for (var i=0; i<uploaded_files.length; i++) {
                     var fr = new FileReader();
-                    fr.fileName = file.name;
+                    var file = uploaded_files[i].file;
+                    fr.fileName = uploaded_files[i].name;
                 
                     var data;
                     var mimetype;
@@ -596,7 +604,8 @@
         }
 
         function volNotifSubmit() {
-            $('#volbtnsubmit').text('Working..');
+            $('#volbtnsubmit').html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
+            $('#submitbtn').prop('disabled', 'true');
             var name = escape($('#namef').val().replace(/\s/g, "+"));
             var email = escape($('#emailf').val().replace(/\s/g, "+"));
 
