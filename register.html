@@ -220,8 +220,8 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Home</a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="">Register<span class="sr-only">(current page)</span></a>
+              <li class="nav-item">
+                <a class="nav-link active" href="">Register<span class="sr-only">(current page)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#faq">FAQ</a>
@@ -358,7 +358,7 @@
                         <p style="font-size: 14.5px; margin-top: 0; color: rgb(113, 113, 113); position: absolute; left: 30px; max-width: 65%;">
                             * You may register and return here when your forms are completed
                         </p>
-                        <button type="button" class="btn btn-danger" id="submitbtn" onclick="javascript:doPost();">Submit!</button>
+                        <button type="button" class="btn btn-danger" id="submitbtn" onclick="doSubmit();">Submit!</button>
                     </div>
                 </div>
             </div>
@@ -386,7 +386,7 @@
                             </div>
                         </form>
                         <button id="volbtnsubmit" type="submit"
-                            onclick="javascript:volNotifSubmit(); return false;">Submit</button>
+                            onclick="volNotifSubmit(); return false;">Submit</button>
                     </div>
                 </div>
             </div>
@@ -425,10 +425,10 @@
         function xBind() {
             $('.x').unbind("click");
             $('.x').one("click", function () {
-                var fname = $(this).parent().find('.name').text();
-                var fsize = $(this).parent().find('.name').attr('data-file-size');
-                for (var i = 0; i < uploaded_files.length; i++) {
-                    if ((uploaded_files[i]['name'] == fname) && (uploaded_files[i]['size'] == fsize)) {
+                var fileName = $(this).parent().attr('data-file-name');
+                var fileSize = $(this).parent().attr('data-file-size');
+                for (var i=0; i<uploaded_files.length; i++) {
+                    if ((uploaded_files[i].file.name == fileName) && (uploaded_files[i].file.size == fileSize)) {
                         uploaded_files.splice(i, 1);
                         break;
                     }
@@ -451,8 +451,8 @@
 
         function testName() {
             var name = $('#rename-field').val();
-            var name_pattern = /^[a-zA-Z-]{2,}(\s[a-zA-Z-]{2,})+$/;
-            if (name_pattern.test(name)) {
+            var namePattern = /^[a-zA-Z-]{2,}(\s[a-zA-Z-]{2,})+$/;
+            if (namePattern.test(name)) {
                 $('#rename-field').removeClass('is-invalid');
                 $('#rename-field').addClass('is-valid');
                 return true;
