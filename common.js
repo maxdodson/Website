@@ -68,11 +68,6 @@ $(document).ready(function() {
 		var target = this.hash;
 		var $target = $(target);
 		var nav = $('.navbar').height();
-
-		$('html, body').stop().animate({'scrollTop': $target.offset().top - nav - $target.height()/3}, 900, 'swing', function() {
-			if (window.scrollY != Math.floor($target.offset().top - nav - $target.height()/3)) {
-				$('html, body').stop().animate({'scrollTop': $target.offset().top - ($target.height()/3)}, 500, 'swing');
-			}
-		});
+		$('html, body').stop().animate({'scrollTop': $target.offset().top - nav - $target.height()/3}, 900, 'swing');
 	});
 });
