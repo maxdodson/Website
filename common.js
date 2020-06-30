@@ -57,9 +57,11 @@ $(document).ready(function() {
     });
 
     // Smooth scrolling for URLs
-    if (window.location['href'].includes('#')) {
-		$('html, body').scrollTop($('html, body').scrollTop()-80);
-		$('html, body').animate({'scrollTop': $('html, body').scrollTop()+10}, 500, 'swing');
+    if (window.location.hash) {
+		var target = window.location.hash;
+		var $target = $(target);
+		var nav = $('.navbar').height();
+		$('html, body').stop().animate({'scrollTop': $target.offset().top - nav - $target.height()/3}, 200, 'swing');
 	}
 
 	// Smooth scrolling for anchor links
