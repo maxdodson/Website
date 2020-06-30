@@ -68,12 +68,6 @@ a:not(.a-colored), a:hover:not(.a-colored), a:focus:not(.a-colored), a:active:no
 .bg-light {
 	box-shadow: 0 0 5px #8f8f8f;
 }
-.navbar.bg-transparent .nav-link.active {
-	border-bottom: 2px solid white;
-}
-.navbar.bg-light .nav-link.active {
-	border-bottom: 2px solid black;
-}
 
 /* 
 ---------------------------------------------------------------
@@ -565,6 +559,26 @@ a.social :hover {
 	}
 	.card-columns {
 		column-count: 3;
+	}
+	.navbar.bg-light .nav-link.active::after {
+		display: block;
+		border-bottom: 2px solid black;
+		content: "";
+		margin-top: 2px;
+		width: 75%;
+		border-radius: 2px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.navbar.bg-transparent .nav-link.active::after {
+		display: block;
+		border-bottom: 2px solid white;
+		content: "";
+		margin-top: 2px;
+		width: 75%;
+		border-radius: 2px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
