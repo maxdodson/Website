@@ -4,17 +4,17 @@
 <head>
   <title>Dev</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
   <link rel="icon" href="img/icon.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body id="top" data-spy="scroll" data-target="#navbar-1" data-offset="100">
+<body id="top" data-spy="scroll" data-target="#navbarNav" data-offset="108">
   <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="navbar-1">
     <div class="container" style="max-width: 1200px;">
       <a class="navbar-brand" href="#" title="Scroll to top">
-        <svg style="height: 33px; margin-top: 5px" viewBox="0 0 450.56 104.82" height="33" xmlns="http://www.w3.org/2000/svg">
+        <svg id="brand" style="margin-top: 5px;" viewBox="0 0 450.56 104.82" height="33" xmlns="http://www.w3.org/2000/svg">
           <title>HackBI</title>
           <g id="Icon">
             <path d="M93.67,83.67A10.47,10.47,0,0,1,83.21,94.15H17A10.48,10.48,0,0,1,6.48,83.67V17.31A10.48,10.48,0,0,1,17,6.83H83.21A10.47,10.47,0,0,1,93.67,17.31Z" transform="translate(-5.23 -5.58)" style="fill:#fff2a6"></path>
@@ -42,7 +42,7 @@
           </g>
         </svg>
       </a>
-      <a href="#faq" type="button" class="btn btn-light btn-md text-nowrap cta d-md-none a-colored" id="cta-collapsed">
+      <a href="#faq" class="btn btn-light btn-md text-nowrap cta d-md-none a-colored" id="cta-collapsed">
         Register
         <span class="cta-arrow">
           ➝
@@ -72,7 +72,7 @@
           </li>
         </ul>
       </div>
-      <a href="#faq" type="button" class="btn btn-light btn-md text-nowrap cta d-none d-md-block a-colored" id="cta-uncollapsed">
+      <a href="#faq" class="btn btn-light btn-md text-nowrap cta d-none d-md-block a-colored" id="cta-uncollapsed">
         Register
         <span class="cta-arrow">
           ➝
@@ -89,7 +89,6 @@
       </h1>-->
       <svg class="main-text" viewBox="100 0 350 90" xmlns="http://www.w3.org/2000/svg">
         <!-- IF KEPT, MAKE SPACE MORE DEFINED & REMOVE JAAPOKKI FONT IN HEAD -->
-        <!-- REMOVE id="Text" and change the SVG (this one and logo) to start as white -- WILL CHANGE JS -->
         <title>HackBI</title>
         <defs>
           <filter id="shadow" height="120%">
@@ -135,7 +134,7 @@
       <div class="row">
         <div class="col-12 header" id="faq">
           <h1>Frequently Asked Questions</h1>
-          <h4>Don't see your question here? Click <a href="#contact">here</a> to ask it!</h4>
+          <h4>Don't see your question here? <a href="#contact">Contact us</a>!</h4>
         </div>
         <div class="col-sm-6 col-12">
           <div class="qa hideme">
@@ -165,10 +164,11 @@
               a paid summer internship at <a href="https://deciphernow.com/" target="_blank">Decipher Technology Studios</a>!</h4>
           </div>
           <div class="qa hideme">
-            <h3>What if I don't have a laptop?</h3>
-            <h4>If you're in middle school, computers will be provided. <br /><br />Otherwise, we have a limited number
-              of computers to lend out.
-              Let us know ahead of time <a href="#contact">here</a>!</h4>
+            <h3>What should I bring?</h3>
+            <h4>You'll need a laptop, charger, and something to sleep with (or just a lot of caffeine).
+              <br /><br />
+              If you're in middle school, you don't need to bring anything!
+            </h4>
           </div>
           <!--
             <div class="qa hideme">
@@ -180,12 +180,12 @@
         <div class="col-sm-6 col-12">
           <div class="qa hideme">
             <h3>Who can attend HackBI?</h3>
-            <h4>HackBI is open to:
-              <ul>
-                <li>all high schoolers for both days, December 7-8 (10 AM Sat.–12 PM Sun.)</li>
-                <li>eighth graders for December 7 only (10 AM–10 PM)</li>
-                <li>If you're an adult and would like to come, consider <a href="register">volunteering</a>!</li>
-              </ul>
+            <h4>
+              HackBI is open to high schoolers for both days, December 7-8 (10am Sat.–12pm Sun.)
+              and eighth graders for the first day, December 7 (10am–10pm).
+              <br><br>
+              If you're an adult and would like to come, consider <a href="volunteer">volunteering</a>!
+            </h4>
           </div>
           <div class="qa hideme">
             <h3>How much does HackBI cost?</h3>
@@ -207,24 +207,24 @@
               opportunity at the beginning to join a team if you'd like.</h4>
           </div>
           <div class="qa hideme">
-            <h3>What should I bring?</h3>
-            <h4>You'll need a laptop, charger, and something to sleep with (or just a lot of caffeine).
-              <br /><br />
-              If you're in middle school, you don't need to bring anything!
-            </h4>
+            <h3>What if I don't have a laptop?</h3>
+            <h4>If you're in middle school, computers will be provided. <br /><br />Otherwise, we have a limited number
+              of computers to lend out.
+              Let us know ahead of time <a href="#contact">here</a>!</h4>
           </div>
         </div>
       </div>
     </div>
   </div>
 
+  <hr style="margin: 30px auto 0 auto; width: 70%;">
 
   <div class="section workshops jumbotron-fluid text-center">
     <div class="container">
       <div class="row">
         <div class="col-12 header" id="workshops">
           <h1>Workshops</h1>
-          <h4>Have a recommendation? Let us know <a href="#contact">here</a>!</h4>
+          <br>
         </div>
       </div>
       <div class="card-columns">
@@ -273,7 +273,7 @@
 					</div>
 				</div>
 			
-				<div class="card">
+				<div class="card" style="margin-bottom: 20px;">
 					<div class="card-overlay" onclick=""><div id="ptable"><p>Create basic apps easily with App Inventor!</p></div></div>
 					<img data-src="img/appinventor.png" class="img-responsive card-img-top" style="width: 180px; height: 62px; margin-bottom: 0">
 					<hr />
@@ -384,14 +384,17 @@
     </div>
   </div>
 
-  <div class="section jumbotron-fluid">
-    <div class="container" style="width: 100%; padding: 0;">
-      <div class="row" id="contact">
-        <div class="col-xs-12 col-sm-6 col-lg-5 text-center" style="padding: 0;">
-          <div id="map" style="height: 460px; border: 1px solid white">MAP</div>
+  <hr style="margin: 0 auto 0 auto; width: 70%;">
+
+  <div class="contact">
+    <h1 id="contact">Contact Us</h1>
+    <div class="container contact-container" style="box-shadow: 0 2px 15px rgba(0,10,20,.25); position: relative;">
+      <div class="row" style="">
+        <div class="col-xs-12 col-sm-6 text-center" style="padding: 0;">
+          <div id="map" style="overflow: hidden; max-height: 600px; color: black;">MAP</div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-lg-5 offset-lg-1 header contact" data-offset="150">
-          <h1>Contact Us</h1>
+        <div class="col-xs-12 col-sm-6 header" style="padding: 35px; background-color: #2c2f31;">
+          <h2 style="text-align: center; font-weight: bold; font-size: 2.4rem;">Send a Message</h2>
           <form id="contactform" style="font-size: 1.2rem;">
             <div class="form-group">
               <label>Name</label>
@@ -402,8 +405,8 @@
               <input id="emailf" class="form-control" type="email" placeholder="Email">
             </div>
             <div class="form-group">
-              <label>Question</label>
-              <textarea id="contactq" class="form-control" rows="2" placeholder="Question" style="resize: vertical"></textarea>
+              <label>Message</label>
+              <textarea id="contactq" class="form-control" rows="3" placeholder="Message" style="resize: vertical"></textarea>
             </div>
             <button id="contactsubmit" class="btn btn-primary" type="submit" onclick="javascript:contactSubmit(); return false;">Submit</button>
             <button id="contactclear" class="btn btn-outline-secondary" type="reset" onclick="javascript:clearForm(); return false;" style="float: right">Clear</button>
@@ -421,18 +424,18 @@
       <div class="row">
         <div class="col-12 header">
           <h1>Sponsors</h1>
-          <h4>Interested in being a sponsor? Reach out to us <a href="#contact">here</a>!</h4>
+          <h4>Interested in being a sponsor? <a href="#contact">Contact us</a>!</h4>
           <br>
         </div>
         <div class="col-12 logos">
-          <a href="https://deciphernow.com" target="_blank"><img data-src="img/decipher.png" title="Decipher Technology Studios"></a>
-          <a href="https://www.redhorsecorp.com/" target="_blank"><img data-src="img/redhorse.png" title="Redhorse Corporation"></a>
-          <a href="https://gen.xyz" target="_blank"><img data-src="img/xyz.png" title="XYZ"></a>
-          <a href="https://www.bishopireton.org/parents/pto" target="_blank"><img data-src="img/bi-logo.png" title="Bishop Ireton High School PTO"></a>
-          <img data-src="img/ibg.png" title="Innovative Business Group">
-          <a href="https://www.thinkfun.com" target="_blank"><img data-src="img/think-fun.png" title="ThinkFun"></a>
-          <a href="https://www.brandmakers.com" target="_blank"><img data-src="img/brandmakers.png" title="Brand Makers"></a>
-          <a href="https://ultrapress.com" target="_blank"><img data-src="img/ultra-press.png" title="UltraPress"></a>
+          <a class="logos-img" href="https://deciphernow.com" target="_blank"><img data-src="img/decipher.png" title="Decipher Technology Studios"></a>
+          <a class="logos-img" href="https://www.redhorsecorp.com/" target="_blank"><img data-src="img/redhorse.png" title="Redhorse Corporation"></a>
+          <a class="logos-img" href="https://gen.xyz" target="_blank"><img data-src="img/xyz.png" title="XYZ"></a>
+          <a class="logos-img" href="https://www.bishopireton.org/parents/pto" target="_blank"><img data-src="img/bi-logo.png" title="Bishop Ireton High School PTO"></a>
+          <a class="logos-img"><img data-src="img/ibg.png" title="Innovative Business Group"></a>
+          <a class="logos-img" href="https://www.thinkfun.com" target="_blank"><img data-src="img/think-fun.png" title="ThinkFun"></a>
+          <a class="logos-img" href="https://www.brandmakers.com" target="_blank"><img data-src="img/brandmakers.png" title="Brand Makers"></a>
+          <a class="logos-img" href="https://ultrapress.com" target="_blank"><img data-src="img/ultra-press.png" title="UltraPress"></a>
         </div>
       </div>
     </div>

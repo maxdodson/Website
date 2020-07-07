@@ -44,7 +44,7 @@ $(document).ready(function() {
 		updateNav();
 	});
 
-    $('.navbar .container').on('click', '.navbar-toggler', function() {
+    $('.navbar-toggler').on('click', function() {
 		$('.cta').removeClass('btn-light');
 		$('.cta').addClass('btn-dark');
         $('.navbar').removeClass('bg-transparent');
@@ -61,15 +61,17 @@ $(document).ready(function() {
 		var target = window.location.hash;
 		var $target = $(target);
 		var nav = $('.navbar').height();
-		$('html, body').stop().animate({'scrollTop': $target.offset().top - nav - $target.height()/3}, 200, 'swing');
+		$('html, body').stop().animate({'scrollTop': $target.offset().top - nav - 35}, 900, 'swing');
 	}
 
 	// Smooth scrolling for anchor links
 	$('a[href^="#"]').on('click', function(e) {
 		e.preventDefault();
+		$('#navbarNav').collapse('hide');
+		$('.navbar-toggler').removeClass('is-active');
 		var target = this.hash;
 		var $target = $(target);
-		var nav = $('.navbar').height();
-		$('html, body').stop().animate({'scrollTop': $target.offset().top - nav - $target.height()/3}, 900, 'swing');
+		var nav = 54;
+		$('html, body').stop().animate({'scrollTop': $target.offset().top - nav - 35}, 900, 'swing');
 	});
 });

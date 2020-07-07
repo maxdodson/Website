@@ -33,10 +33,9 @@ html {
 }
 
 body {
-	background-color: white;
-	color: white;
+	background-color: #f7f8f9;
+	color: black;
 	font-family: Lato, Geneva, Helvetica, Verdana, Tahoma, Arial, sans-serif;
-	min-width: 440px;
 	overflow-x: hidden;
 }
 
@@ -163,7 +162,6 @@ Copyright (c) 2016 Jonathan Suh <hello@jonsuh.com> (jonsuh.com)
 .jumbotron {
 	padding: 0;
 	height: 100vh;
-	background-color: rgb(126, 95, 56);
 	background-color: rgb(56, 42, 24);
 	margin: 0;
 	display: flex;
@@ -172,10 +170,6 @@ Copyright (c) 2016 Jonathan Suh <hello@jonsuh.com> (jonsuh.com)
 }
 
 video {
-	/*
-	position: relative;
-	z-index: 0;
-	*/
 	width: 100%;
 	object-fit: cover;
 	height: 100%;
@@ -183,30 +177,6 @@ video {
 	overflow-y: hidden;
 	margin: 0;
 }
-/*
-.text-wrapper h1 {
-	font-family: "Jaapokki", Helvetica, Arial, sans-serif;
-	font-size: 7rem;
-	bottom: 0;
-	padding-bottom: 0;
-	margin-bottom: 0;
-	padding: 0;
-	line-height: 1;
-	-webkit-text-stroke: 4px black;
-	letter-spacing: -4px;
-}
-*/
-/*/ #sp1 {
-	font-family: "Jaapokki Subtract", "Jaapokki", Helvetica, Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-}
-
-#sp2 {
-	font-family: "Jaapokki", Helvetica, Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-} /*/
 
 .text-wrapper {
 	width: 100%;
@@ -214,6 +184,10 @@ video {
 	font-family: Verdana, Helvetica, Geneva, Tahoma, Arial, sans-serif;
 	line-height: 1;
 	padding-top: 15px;
+	color: white;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .main-text {
@@ -232,11 +206,8 @@ video {
 	display: inline;
 }
 #lead2 {
-	font-size: 35px;
 	font-weight: bold;
-	text-shadow: 0 0 2px black;
-	/* ********************* */
-	font-family: Montserrat; 
+	font-family: Montserrat, Verdana, Tahoma, Helvetica, Geneva, Arial, sans-serif; 
 	font-weight: normal;
 	font-size: 40px;
 	margin-top: 3px;
@@ -249,53 +220,27 @@ video {
 }
 
 .mainbtn {
+	font-family: Lato, Geneva, Helvetica, Verdana, Tahoma, Arial, sans-serif;
+	font-size: 23px;
+	text-shadow: 0 0 8px #2e2e2e;
 	margin-left: 20px;
 	margin-right: 20px;
-	width: 20%;
-	height: 50px;
+	margin-top: 10px;
 	opacity: 1;
 	font-weight: bold;
-	/*
-	color: black;
-	*/
-
-	transition: .05s ease-in-out;
-	margin-top: 10px;
-
-	/**/
+	color: white;
 	border-width: 3px;
 	border-color: #fafafa;
-	color: darkgray;
-	height: 55px;
-	mix-blend-mode: normal !important;
-	background-color: rgba(245, 245, 245, 0.169);
-
-	/**/
-	color: white;
+	border-radius: 30px;
 	height: 60px;
 	width: 30%;
 	max-width: 220px !important;
-	background-color: rgba(138, 138, 138, 0.3);
-	text-shadow: 0 0 8px #4e4d4d;
-	border-radius: 30px;
-	transition: background-color 0.3s;
-	margin-top: 10px;
-	background-color: rgba(194, 194, 194, 0.15);
-
-	text-shadow: 0 0 8px #2e2e2e;
-	font-family: Lato;
-	font-size: 23px;
-	background-color: rgba(209, 208, 208, 0.15);
+	min-width: 150px;
 	box-shadow: 0 0 15px -2px black !important;
 	background-color: rgba(109, 108, 108, 0.3);
-	/*
-	border-radius: 10px;
-	width: 230px !important;
-	height: 55px;
-	background-color: rgba(194, 194, 194, 0.15);
-	*/
+	transition: all 0.2s ease;
 }
-.mainbtn:hover {
+.mainbtn:hover, .mainbtn:focus, .mainbtn:active {
 	background-color: white;
 	border: none;
 	color: black;
@@ -308,7 +253,7 @@ video {
 	margin-left: auto;
 	max-width: 120px;
 	width: 100%;
-	font-family: Lato;
+	font-family: Lato, Geneva, Helvetica, Verdana, Tahoma, Arial, sans-serif;
 	font-weight: bold;
 	letter-spacing: -0.5px;
 }
@@ -338,7 +283,6 @@ video {
 
 .section {
 	padding-top: 50px;
-	background-color: black !important;
 }
 
 .header {
@@ -349,73 +293,83 @@ video {
 .container .row .header h1 {
 	font-size: 52px;
 	font-family: Montserrat, Verdana, Tahoma, Helvetica, Geneva, Arial, sans-serif;
-	text-shadow: -4px 6px 0px black;
 	font-weight: bold;
-	color: white;
 	text-align: center;
+	color: #202124;
+	text-shadow: none;
 }
 .container .row .header h4 {
 	font-size: 18px;
 	font-family: Montserrat, Verdana, Tahoma, Helvetica, Geneva, Arial, sans-serif;
-	color: white;
+	color: #202124;
 }
 .container .row .header h4 a {
 	font-size: 18px;
 	font-family: Montserrat, Verdana, Tahoma, Helvetica, Geneva, Arial, sans-serif;
-	color: white;
-	font-weight: bold;
+	color: #202124;
+	font-weight: normal;
 	cursor: pointer;
-	text-decoration: none;
+	text-decoration: underline;
 }
 .container .row .header h4 a:hover {
 	text-decoration: underline;
 }
 
 .faq {
-	color: white;
 	text-align: center;
-	background-color: var(--secondary-color);
+	background-color: #f7f8f9;
 }
 .faq a {
-	color: white;
+	color: #202124;
 	text-decoration: underline;
 	cursor: pointer;
 }
 .faq .qa {
-	color: white;
+	color: #202124;
 	text-align: left;
-	background-color: transparent;
+	background-color: white;
+	border: 1px solid #f0f0f0;
+	border-radius: 1px;
 	padding: 40px;
 	margin: 40px 0 40px 0;
+	border-bottom: 3px solid rgb(84, 116, 219);
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	box-shadow: 0 4px 4px -4px rgb(105, 105, 105);
 }
 .faq .qa:hover {
 	transform: translate(-5px, -5px);
 }
+.faq .qa h4 {
+	font-size: 1.4rem;
+}
 .faq .qa h3:first-child {
-	color: white;
-	font-size: 1.6em;
+	color: #202124;
+	font-size: 1.6rem;
 	font-weight: bold;
 	padding-bottom: 15px;
 	margin-top: 0;
 }
 
+.workshops {
+	background-color: #f7f8f9;
+	padding-bottom: 60px;
+}
+
 .card {
-	width: 7.75em;
+	width: 100%;
+	max-width: 14rem;
 	margin: 10px 0 25px 0;
 	display: inline-block;
-	box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.20), 0 7px 21px 0 rgba(0, 0, 0, 0.19);
-	background: #fff;
-	color: black;
+	box-shadow: 0 5px 8px -2px rgba(0, 0, 0, 0.15), 0 7px 15px 0 rgb(216, 216, 220);
+	background: white;
+	color: #202124;
 	font-family: Lato, Geneva, Helvetica, Verdana, Tahoma, Arial, sans-serif;
 	font-size: 28px;
 	border-radius: 10px;
 	border: none;
 	padding-bottom: 15px;
 	position: relative;
-	transition: transform 1s;
-}
-.card:hover {
-	transform: translate(-2px, -2px);
 }
 .card img {
 	margin: 15px auto 5px auto;
@@ -448,10 +402,41 @@ video {
 }
 .card-overlay:hover, .card-overlay:active {
 	opacity: 1;
-	background-color: rgba(110, 110, 110, 0.85);
+	background-color: rgba(110, 115, 118, 0.85);
 }
 .card-overlay:hover ~ .card-body p {
 	color: lightgray;
+}
+
+.contact {
+	background-color: #f7f8f9;
+	color: white !important;
+}
+.contact h1 {
+	font-size: 52px;
+	font-family: Montserrat, Verdana, Tahoma, Helvetica, Geneva, Arial, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	color: #202124 !important;
+	text-shadow: none;
+	padding: 35px 10px 30px 10px;
+}
+
+.form-control {
+	color: white !important;
+	background-color: transparent !important;
+}
+.form-control:active, .form-control:focus {
+	background-color: rgba(255,255,255,.1) !important;
+	outline: none !important;
+	box-shadow: none !important;
+	border-color: white;
+}
+
+.sponsors {
+	color: black !important;
+	background-color: #f8f9fa;
+	padding-bottom: 10px;
 }
 
 .img-responsive {
@@ -470,6 +455,7 @@ video {
 	font-style: italic;
 	font-size: .8rem;
 	letter-spacing: .4px;
+	margin: 15px auto 0 auto;
 }
 
 .logos img {
@@ -477,15 +463,7 @@ video {
 	width: auto;
 	max-width: 100%;
 	max-height: 100px;
-	margin: 30px 30px 15px 0px;
-}
-.logos img :first-child {
-	margin-left: 0 !important;
-	margin-right: 0 !important;
-}
-.logos img :last-child {
-	margin-left: 0 !important;
-	margin-right: 0 !important;
+	padding: 30px 30px 15px 30px;
 }
 
 .footer {
@@ -510,13 +488,21 @@ a.social :hover {
 	margin-top: 5px;
 }
 
+@media screen and (max-width: 370px) {
+	.navbar-brand {
+		width: 30vw;
+	}
+	#brand {
+		width: 100%;
+	}
+}
 /*PHONES*/
 @media screen and (max-width: 575px) {
 	.jumbotron {
 		height: 85vh;
 	}
 	.main-text {
-		height: 6.5rem;
+		height: 5.5rem;
 	}
 	.mainbtn {
 		width: 36%;
@@ -525,6 +511,15 @@ a.social :hover {
 	}
 	.card-columns {
 		column-count: 2;
+	}
+	#map {
+		height: 460px;
+	}
+	.contact-container {
+		max-width: 575px;
+	}
+	#brand {
+		height: 30px;
 	}
 }
 
@@ -540,6 +535,15 @@ a.social :hover {
 	}
 	.card-columns {
 		column-count: 2;
+	}
+	#map {
+		height: 100%;
+	}
+	.contact-container {
+		max-width: 576px;
+	}
+	#brand {
+		height: 33px;
 	}
 }
 
@@ -562,13 +566,22 @@ a.social :hover {
 	}
 	.navbar.bg-light .nav-link.active::after {
 		display: block;
-		border-bottom: 2px solid black;
+		border-bottom: 2px solid rgba(0,0,0,.9);
 		content: "";
 		margin-top: 2px;
 		width: 75%;
 		border-radius: 2px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+	.navbar.bg-light .nav-item.active::after {
+		display: block;
+		content: "";
+		width: 100%;
+		border-top: 3px solid black;
+		/* border-top-left-radius: 3px; */
+		/* border-top-right-radius: 3px; */
+		margin: 8px auto -10px auto;
 	}
 	.navbar.bg-transparent .nav-link.active::after {
 		display: block;
@@ -579,6 +592,9 @@ a.social :hover {
 		border-radius: 2px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+	.contact-container {
+		max-width: 768px;
 	}
 }
 
@@ -599,6 +615,9 @@ a.social :hover {
 	.card-columns {
 		column-count: 4;
 	}
+	.contact-container {
+		max-width: 992px;
+	}
 }
 
 /*XL COMPUTERS*/
@@ -617,6 +636,9 @@ a.social :hover {
 	}
 	.card-columns {
 		column-count: 4;
+	}
+	.contact-container {
+		max-width: 1200px;
 	}
 }
 

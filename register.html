@@ -476,13 +476,13 @@
                     doPost();
                 }
             } else {
-                uploaded_files.forEach(function(item) {
-                    if (!(pattern.test(item.name))) {
+                for (var file of uploaded_files) {
+                    if (!(pattern.test(file.name))) {
                         renamePrompt();
                         prompted = true;
                         return;
                     }
-                });
+                }
                 doPost();
             }
         }
@@ -585,7 +585,7 @@
                                         uploaded_files.length = 0;
                                         ajax_responses = 0;
                                         setTimeout(function() {
-                                            $('#registrationModal').modal('toggle');
+                                            $('#registrationModal').modal('hide');
                                         }, 1000);
                                         setTimeout(function() {
                                             location.reload();
@@ -623,7 +623,7 @@
                     200: function() {
                         $('#volbtnsubmit').text('Thank you!');
                         setTimeout(function() {
-                            $('#volunteerModal').modal('toggle');
+                            $('#volunteerModal').modal('hide');
                         }, 1000);
                         setTimeout(function() {
                             location.reload();
