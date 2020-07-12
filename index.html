@@ -1,19 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Dev</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81281305-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-81281305-2');
+  </script>
+  -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HackBI</title>
   <link rel="icon" href="img/icon.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+
+  <meta name="keywords" content="HackBI, Hack BI, Hackathon, Hack BI IV, Hack BI 4, Hack BI 2, Hack BI II, Bishop Ireton">
+  <meta name="description" content="HackBI is a 24-hour student hackathon at Bishop Ireton HS. Learn something new and collaborate with others to bring your idea to life!">
+  <meta name="theme-color" content="#FC4D45">
+  <meta property="og:title" content="HackBI">
+  <meta property="og:description" content="HackBI is a 24-hour student hackathon at Bishop Ireton HS. Learn something new and collaborate with others to bring your idea to life!">
+  <meta property="og:site_name" content="HackBI">
+  <meta property="og:image" content="img/Icon100.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@hackbiofficial">
+  <meta name="twitter:title" content="HackBI">
+  <meta name="twitter:description" content="HackBI is a 24-hour student hackathon at Bishop Ireton HS. Learn something new and collaborate with others to bring your idea to life!">
+  <meta name="twitter:image" content="img/Icon100.png">
 </head>
 
 <body id="top" data-spy="scroll" data-target="#navbarNav" data-offset="108">
   <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="navbar-1">
     <div class="container" style="max-width: 1200px;">
-      <a class="navbar-brand" href="#" title="Scroll to top">
+      <a class="navbar-brand" href="#home" title="Scroll to top">
         <svg id="brand" style="margin-top: 5px;" viewBox="0 0 450.56 104.82" height="33" xmlns="http://www.w3.org/2000/svg">
           <title>HackBI</title>
           <g id="Icon">
@@ -42,12 +65,12 @@
           </g>
         </svg>
       </a>
-      <a href="#faq" class="btn btn-light btn-md text-nowrap cta d-md-none a-colored" id="cta-collapsed">
+      <!--
+      <a href="register" class="btn btn-light btn-md text-nowrap cta d-md-none a-colored" id="cta-collapsed">
         Register
-        <span class="cta-arrow">
-          ➝
-        </span>
+        <span class="cta-arrow" data-stuff="➝">❯</span>
       </a>
+      -->
       <button class="hamburger hamburger--squeeze navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
@@ -58,6 +81,11 @@
           <li class="nav-item">
             <a class="nav-link" href="#home">Home<span class="sr-only">(current page)</span></a>
           </li>
+          <!--
+          <li class="nav-item">
+            <a class="nav-link" href="register">Register</a>
+          </li>
+          -->
           <li class="nav-item">
             <a class="nav-link" href="#faq">FAQ</a>
           </li>
@@ -65,30 +93,26 @@
             <a class="nav-link" href="#contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="team.html">Team</a>
+            <a class="nav-link" href="team">Team</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Last Year</a>
+            <a class="nav-link" href="https://hackbi-iii.devpost.com/">Last Year</a>
           </li>
         </ul>
       </div>
-      <a href="#faq" class="btn btn-light btn-md text-nowrap cta d-none d-md-block a-colored" id="cta-uncollapsed">
+      <!--
+      <a href="register" class="btn btn-light btn-md text-nowrap cta d-none d-md-block a-colored" id="cta-uncollapsed">
         Register
-        <span class="cta-arrow">
-          ➝
-        </span>
+        <span class="cta-arrow" data-stuff="➝">❯</span>
       </a>
+      -->
     </div>
   </nav>
 
   <div class="jumbotron jumbotron-fluid text-center" id="home">
     <video autoplay muted poster="img/register.jpg" preload="none" loop></video>
     <div class="text-wrapper">
-      <!--<h1>
-        <span id="sp1">H</span><span id="sp1">A</span><span id="sp1">C</span><span id="sp1" style="margin-left: -5px;">K&hairsp;</span><span id="sp2">B</span><span id="sp2" style="margin-left: -5px;">I</span>
-      </h1>-->
       <svg class="main-text" viewBox="100 0 350 90" xmlns="http://www.w3.org/2000/svg">
-        <!-- IF KEPT, MAKE SPACE MORE DEFINED & REMOVE JAAPOKKI FONT IN HEAD -->
         <title>HackBI</title>
         <defs>
           <filter id="shadow" height="120%">
@@ -113,12 +137,23 @@
         </g>
       </svg>
       <br>
+      <!--
       <h5 id="lead1" class="lead-text">24-hour hackathon at Bishop Ireton High School</h5>
       <br>
-      <h2 id="lead2" class="lead-text"><b>December 7-8</b></h2>
+      <h2 id="lead2" class="lead-text">December 7-8</h2>
       <br>
       <button type="button" class="btn btn-outline-light btn-lg text-nowrap mainbtn">Register</button>
       <button type="button" class="btn btn-outline-light btn-lg text-nowrap mainbtn">Volunteer</button>
+      -->
+      <h2 id="lead2" class="lead-text">Can't wait to see you there!</h2>
+      <!--
+      <button type="button" class="btn btn-outline-light btn-lg text-nowrap mainbtn" style="
+        margin-top: 40px;
+        max-width: 380px !important;
+        min-width: 300px !important;
+        white-space: break-spaces !important;
+        height: fit-content;">Be notified when registration&nbsp;opens!</button>
+      -->
     </div>
     <div id="arrow" class="text-center d-none d-md-block">
       <a href="#faq" title="Scroll down" id="arrow-svg">
@@ -136,11 +171,19 @@
           <h1>Frequently Asked Questions</h1>
           <h4>Don't see your question here? <a href="#contact">Contact us</a>!</h4>
         </div>
-        <div class="col-sm-6 col-12">
+
+        <div class="col-sm-6 col-12"> <!-- REMOVE THIS ENTIRE BLOCK -->
+          <div class="qa hideme">
+            <h3>HackBI & COVID-19?</h3>
+            <h4>TBD</h4>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-12" style="display: none;"> <!-- REMOVE DISPLAY: NONE -->
           <div class="qa hideme">
             <h3>What is HackBI?</h3>
-            <h4>HackBI is a student-run hackathon at Bishop Ireton High School, where you will have 24 hours to learn
-              how to code (or just learn something new) and make your idea come to life!</h4>
+            <h4>HackBI is a student-run hackathon at Bishop Ireton High School. You'll have 24 hours to learn
+              a variety of new things, collaborate, and make your idea come to life!</h4>
           </div>
           <div class="qa hideme">
             <h3>What is a hackathon?</h3>
@@ -177,7 +220,7 @@
             </div>
           -->
         </div>
-        <div class="col-sm-6 col-12">
+        <div class="col-sm-6 col-12" style="display: none;"> <!-- REMOVE DISPLAY: NONE -->
           <div class="qa hideme">
             <h3>Who can attend HackBI?</h3>
             <h4>
@@ -233,10 +276,20 @@
 					<img data-src="img/html_css.png" class="img-responsive card-img-top" style="width: 140px; height: 101px; margin-bottom: -10px;">
 					<hr />
 					<div class="card-body">
-						<p class="card-title"><strong>HTML & CSS</strong></p>
+						<p class="card-title"><strong>HTML &&nbsp;CSS</strong></p>
 					</div>
 				</div>
-			
+      
+        <div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn how to create your own Minecraft mods!</p></div></div>
+					<img data-src="img/minecraft.jpg" class="img-responsive card-img-top" style="width: 90px; height: 92px; padding: 5px">
+					<hr />
+					<div class="card-body">
+						<p class="card-title" style="padding: 0 8px 0 8px"><strong>Minecraft Mods</strong></p>
+					</div>
+        </div>
+        
+        <!--
 				<div class="card">
 					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn how to make your own skills for the Alexa platform which runs on Echo and other smart devices!</p></div></div>
 					<img data-src="img/alexa.png" class="img-responsive card-img-top" style="width: 100px; height: 112px; margin-bottom: -10px">
@@ -244,10 +297,11 @@
 					<div class="card-body">
 						<p class="card-title" style="padding: 0 8px 0 8px"><strong>Amazon Alexa</strong></p>
 					</div>
-				</div>
+        </div>
+        -->
 			
 				<div class="card">
-					<div class="card-overlay" onclick=""><div id="ptable"><p>Make your website more advanced with JavaScript or use it on its own!</p></div></div>
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Enhance your website with JavaScript or use it on its own!</p></div></div>
 					<img data-src="img/javascript.png" class="img-responsive card-img-top" style="width: 57px; height: 77px; margin-bottom: 0">
 					<hr />
 					<div class="card-body">
@@ -257,7 +311,7 @@
 			
 				<div class="card">
 					<div class="card-overlay" onclick=""><div id="ptable"><p>Use Photoshop to edit photos professionally!</p></div></div>
-					<img data-src="img/photoshop.png" class="img-responsive card-img-top" style="width: 133px; height: 39px; margin-top: 30px">
+					<img data-src="img/photoshop.png" class="img-responsive card-img-top" style="width: 52px; height: 50px; margin-top: 20px">
 					<hr />
 					<div class="card-body">
 						<p class="card-title"><strong>Photoshop</strong></p>
@@ -265,7 +319,7 @@
 				</div>
 	
 				<div class="card">
-					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn Python, an easy to learn yet robust language used by beginners and experts alike!</p></div></div>
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn a simple yet robust language used by beginners and experts alike!</p></div></div>
 					<img data-src="img/python.png" class="img-responsive card-img-top" style="width: 130px; height: 38px; margin-top: 25px; margin-bottom: 0">
 					<hr />
 					<div class="card-body" id="evb">
@@ -275,7 +329,7 @@
 			
 				<div class="card" style="margin-bottom: 20px;">
 					<div class="card-overlay" onclick=""><div id="ptable"><p>Create basic apps easily with App Inventor!</p></div></div>
-					<img data-src="img/appinventor.png" class="img-responsive card-img-top" style="width: 180px; height: 62px; margin-bottom: 0">
+					<img data-src="img/appinventor.png" class="img-responsive card-img-top" style="width: 165px; height: 62px; margin-bottom: 0">
 					<hr />
 					<div class="card-body">
 						<p class="card-title"><strong>App Inventor</strong></p>
@@ -283,7 +337,7 @@
 				</div>
 
 				<div class="card">
-					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn how to program with one of the most popular programming languages!</p></div></div>
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn how to code with one of the most popular programming languages!</p></div></div>
 					<img data-src="img/java.png" class="img-responsive card-img-top" style="width: 50px; height: 80px; margin-top: 20px; margin-bottom: 0">
 					<hr />
 					<div class="card-body">
@@ -292,32 +346,47 @@
 				</div>
 			
 				<div class="card">
-					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn Java in a straightforward and visual way!</p></div></div>
-					<img data-src="img/alice.png" class="img-responsive card-img-top" style="width: 130px; height: 53px; margin-bottom: 0">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn Java in an interactive and visual way!</p></div></div>
+					<img data-src="img/alice.jpg" class="img-responsive card-img-top" style="width: 120px; height: 73px;">
 					<hr />
 					<div class="card-body" id="evb">
-						<p class="card-title"><strong>Alice</strong></p>
+						<p class="card-title"><strong>Alice&nbsp;3</strong></p>
 					</div>
 				</div>
 			
 				<div class="card">
-					<div class="card-overlay" onclick=""><div id="ptable"><p>Use services from Google Cloud Platform to add functionality to your programs!</p></div></div>
-					<img data-src="img/gcp.png" class="img-responsive card-img-top" style="width: 150px; height: 95px; margin-bottom: 0">
+					<div class="card-overlay" onclick=""><div id="ptable">
+            <p>Bring your designs to life in 3D!<br><span style="font-size: 10px; color: lightgray; display: inline-block; padding-top: 10px;">Icon made by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from www.flaticon.com</span></p>
+          </div></div>
+					<img data-src="img/3Dprinter.png" class="img-responsive card-img-top" style="width: 110px; height: 100px;">
 					<hr />
 					<div class="card-body" id="evb">
-						<p class="card-title"><strong>Google Cloud Platform</strong></p>
+						<p class="card-title"><strong>3D Printing</strong></p>
 					</div>
-				</div>
-			
-				<div class="card">
-					<div class="card-overlay" onclick=""><div id="ptable"><p>Use Firebase to develop seamless and scalable apps!</p></div></div>
-					<img data-src="img/firebase.png" class="img-responsive card-img-top" style="width: 190px; height: 64px; margin-bottom: 0">
+        </div>
+        
+        <div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable">
+            <p>Learn how to create and edit your own music!<br><span style="font-size: 10px; color: lightgray; display: inline-block; padding-top: 10px;">Icon from <a href="https://www.freevector.com/electronic-dubstep-vector-26492">FreeVector.com</a></span></p>
+          </div></div>
+					<img data-src="img/music.jpg" class="img-responsive card-img-top" style="width: 85px; height: 83px;">
 					<hr />
-					<div class="card-body">
-						<p class="card-title"><strong>Firebase</strong></p>
+					<div class="card-body" id="evb">
+						<p class="card-title"><strong>Music Production</strong></p>
+					</div>
+        </div>
+        
+        <div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable">
+            <p>Learn the science behind air travel!<br><span style="font-size: 10px; color: lightgray; display: inline-block; padding-top: 10px;">Icon from <a href="https://www.vecteezy.com/free-vector/small">Small Vectors by Vecteezy</a></span></p>
+          </div></div>
+					<img data-src="img/airplane.jpg" class="img-responsive card-img-top" style="width: 150px; height: 93px; margin-bottom: 0">
+					<hr />
+					<div class="card-body" id="evb">
+						<p class="card-title"><strong>Aeronautics</strong></p>
 					</div>
 				</div>
-			
+        <!--
 				<div class="card">
 					<div class="card-overlay" onclick=""><div id="ptable"><p>Use Amazon Web Services to make Alexa skills more advanced!</p></div></div>
 					<img data-src="img/aws.png" class="img-responsive card-img-top" style="width: 155px; height: 66px; margin-top: 20px; margin-bottom: 0">
@@ -326,7 +395,7 @@
 						<p class="card-title"><strong>Amazon Web Services</strong></p>
 					</div>
 				</div>
-
+        -->
       </div>
     </div>
   </div>
@@ -355,8 +424,6 @@
       <button class="btn btn-primary pad" type="button" data-toggle="modal" data-target="#roboticsModal">I'm interested</button>
     </div>
   </div>
-  -->
-  
   <div class="modal fade" id="roboticsModal" tabindex="-1" role="dialog" aria-labelledby="Robotics Signup Dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content" style="color: black">
@@ -383,13 +450,14 @@
       </div>
     </div>
   </div>
+  -->
 
   <hr style="margin: 0 auto 0 auto; width: 70%;">
 
-  <div class="contact">
+  <div class="section contact">
     <h1 id="contact">Contact Us</h1>
     <div class="container contact-container" style="box-shadow: 0 2px 15px rgba(0,10,20,.25); position: relative;">
-      <div class="row" style="">
+      <div class="row">
         <div class="col-xs-12 col-sm-6 text-center" style="padding: 0;">
           <div id="map" style="overflow: hidden; max-height: 600px; color: black;">MAP</div>
         </div>
@@ -408,8 +476,8 @@
               <label>Message</label>
               <textarea id="contactq" class="form-control" rows="3" placeholder="Message" style="resize: vertical"></textarea>
             </div>
-            <button id="contactsubmit" class="btn btn-primary" type="submit" onclick="javascript:contactSubmit(); return false;">Submit</button>
-            <button id="contactclear" class="btn btn-outline-secondary" type="reset" onclick="javascript:clearForm(); return false;" style="float: right">Clear</button>
+            <button id="contactsubmit" class="btn btn-light" type="submit" onclick="javascript:contactSubmit(); return false;">Submit</button>
+            <button id="contactclear" class="btn btn-dark" type="reset" onclick="javascript:clearForm(); return false;" style="float: right">Clear</button>
           </form>
           <h6 class="text-center qualifier">Or email us at
             <a style="color: inherit" href="mailto:HackBI@bishopireton.org">HackBI@bishopireton.org</a>
@@ -428,14 +496,14 @@
           <br>
         </div>
         <div class="col-12 logos">
-          <a class="logos-img" href="https://deciphernow.com" target="_blank"><img data-src="img/decipher.png" title="Decipher Technology Studios"></a>
-          <a class="logos-img" href="https://www.redhorsecorp.com/" target="_blank"><img data-src="img/redhorse.png" title="Redhorse Corporation"></a>
-          <a class="logos-img" href="https://gen.xyz" target="_blank"><img data-src="img/xyz.png" title="XYZ"></a>
-          <a class="logos-img" href="https://www.bishopireton.org/parents/pto" target="_blank"><img data-src="img/bi-logo.png" title="Bishop Ireton High School PTO"></a>
+          <a class="logos-img" href="https://deciphernow.com" target="_blank" rel="noopener"><img data-src="img/decipher.png" title="Decipher Technology Studios"></a>
+          <a class="logos-img" href="https://www.redhorsecorp.com/" target="_blank" rel="noopener"><img data-src="img/redhorse.png" title="Redhorse Corporation"></a>
+          <a class="logos-img" href="https://gen.xyz" target="_blank" rel="noopener"><img data-src="img/xyz.png" title="XYZ"></a>
+          <a class="logos-img" href="https://www.bishopireton.org/parents/pto" target="_blank" rel="noopener"><img data-src="img/bi-logo.png" title="Bishop Ireton High School PTO"></a>
           <a class="logos-img"><img data-src="img/ibg.png" title="Innovative Business Group"></a>
-          <a class="logos-img" href="https://www.thinkfun.com" target="_blank"><img data-src="img/think-fun.png" title="ThinkFun"></a>
-          <a class="logos-img" href="https://www.brandmakers.com" target="_blank"><img data-src="img/brandmakers.png" title="Brand Makers"></a>
-          <a class="logos-img" href="https://ultrapress.com" target="_blank"><img data-src="img/ultra-press.png" title="UltraPress"></a>
+          <a class="logos-img" href="https://www.thinkfun.com" target="_blank" rel="noopener"><img data-src="img/think-fun.png" title="ThinkFun"></a>
+          <a class="logos-img" href="https://www.brandmakers.com" target="_blank" rel="noopener"><img data-src="img/brandmakers.png" title="Brand Makers"></a>
+          <a class="logos-img" href="https://ultrapress.com" target="_blank" rel="noopener"><img data-src="img/ultra-press.png" title="UltraPress"></a>
         </div>
       </div>
     </div>
@@ -447,24 +515,27 @@
         Bishop Ireton High School
       </a>
       <br>
-      <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"  target="_blank" rel="nofollow">MLH Code of Conduct</a>
+      <a href="conduct" rel="nofollow">Conduct</a>
       <br>
-      <a class="social" href="https://www.facebook.com/officialhackbi/" target="_blank">
+      <a class="social" href="https://www.facebook.com/officialhackbi/" target="_blank" rel="noopener">
         <img data-src="img/facebook.svg" title="Facebook">
       </a>
-      <a class="social" href="https://www.twitter.com/HackBIOfficial" target="_blank">
+      <a class="social" href="https://www.instagram.com/hackbiofficial/" target="_blank" rel="noopener">
+        <img data-src="img/instagram.svg" title="Instagram">
+      </a>
+      <a class="social" href="https://www.twitter.com/HackBIOfficial" target="_blank" rel="noopener">
         <img data-src="img/twitter.svg" title="Twitter">
       </a>
-      <a class="social" href="https://pbs.twimg.com/media/DYX2hoVWsAIMxvN.jpg" target="_blank">
+      <a class="social" href="https://pbs.twimg.com/media/DYX2hoVWsAIMxvN.jpg" target="_blank" rel="noopener">
         <img data-src="img/snapchat.svg" title="Snapchat">
       </a>
-      <a class="social" href="https://youtu.be/EZ1UAPTvYns" target="_blank">
+      <a class="social" href="https://youtu.be/EZ1UAPTvYns" target="_blank" rel="noopener">
         <img data-src="img/youtube.svg" title="YouTube">
       </a>
     </div>
   </div>
 
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="text/javascript" src="common.js"></script>
   <script type="text/javascript" src="script.js"></script>
   <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -480,113 +551,7 @@
 						lat: 38.8092594,
 						lng: -77.0811094
 					},
-					styles: [{
-						"elementType": "geometry.fill",
-						"stylers": [{
-							"visibility": "on"
-						}]
-					},
-					{
-						"featureType": "administrative.land_parcel",
-						"stylers": [{
-							"visibility": "off"
-						}]
-					},
-					{
-						"featureType": "administrative.neighborhood",
-						"stylers": [{
-							"visibility": "off"
-						}]
-					},
-					{
-						"featureType": "landscape",
-						"stylers": [
-							{
-								"saturation": -50
-							},
-							{
-								"lightness": 60
-							}
-						]
-				},
-					{
-						"featureType": "landscape.man_made",
-						"elementType": "geometry.fill",
-						"stylers": [{
-								"color": "#efe9e1"
-							},
-							{
-								"saturation": -35
-							}
-						]
-					},
-					{
-						"featureType": "poi",
-						"elementType": "labels.text",
-						"stylers": [{
-							"visibility": "on"
-						}]
-					},
-					{
-						"featureType": "poi.business",
-						"stylers": [{
-							"visibility": "off"
-						}]
-					},
-					{
-						"featureType": "road",
-						"elementType": "labels",
-						"stylers": [{
-							"visibility": "on"
-						}]
-					},
-					{
-						"featureType": "road.arterial",
-						"elementType": "geometry.stroke",
-						"stylers": [{
-							"weight": 2
-						}]
-					},
-					{
-						"featureType": "road.highway",
-							"elementType": "geometry.fill",
-							"stylers": [
-									{
-											"color": "#ef8c25"
-									},
-									{
-											"lightness": 40
-									}
-							]
-					},
-					{
-						"featureType": "road.highway",
-						"elementType": "geometry.fill",
-						"stylers": [
-							{
-									"color": "#ef8c25"
-							},
-							{
-									"lightness": 40
-							}
-					]
-					},
-					{
-						"featureType": "road.highway",
-						"elementType": "geometry.stroke",
-						"stylers": [{
-							"visibility": "off"
-					}
-						]
-					},
-					{
-						"featureType": "water",
-						"elementType": "labels.text",
-						"stylers": [{
-							"visibility": "off"
-						}]
-					}
-				]
+					styles: []
 			});
 			var marker = new google.maps.Marker({
 				position: {

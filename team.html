@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <!--
@@ -11,15 +11,26 @@
 
     gtag('config', 'UA-81281305-2');
   </script>
--->
-  <title>Meet the Team - HackBI</title>
-  <meta name="keywords" content="HackBI, Hack BI, Hack BI IV, Hack BI 4, Bishop Ireton, team, members, students">
-  <meta name="description" content="Meet the students behind HackBI!">
+  -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meet the Team - HackBI</title>
   <link rel="icon" href="img/icon.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+
+  <meta name="keywords" content="HackBI, Hack BI, Hack BI IV, Hack BI 4, Bishop Ireton, team, members, students">
+  <meta name="description" content="Meet the team behind HackBI: a 24-hour student-run hackathon!">
+  <meta name="theme-color" content="#FC4D45">
+  <meta property="og:title" content="HackBI Team">
+  <meta property="og:description" content="Meet the team behind HackBI: a 24-hour student-run hackathon!">
+  <meta property="og:site_name" content="HackBI">
+  <meta property="og:image" content="img/team.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@hackbiofficial">
+  <meta name="twitter:title" content="HackBI Team">
+  <meta name="twitter:description" content="Meet the team behind HackBI: a 24-hour student-run hackathon!">
+  <meta name="twitter:image" content="img/team.jpg">
   
   <style>
     html {
@@ -28,7 +39,6 @@
     .jumbotron {
       color: white;
       text-align: center;
-      font-family: "Jaapokki", Helvetica, Arial, sans-serif;
       background: var(--main-color);
       background-image: url('img/team.jpg');
       background-position: center;
@@ -36,6 +46,7 @@
       background-size: cover;
       height: 20rem;
       margin: 0;
+      border-radius: 0;
     }
     .center {
       text-align: center;
@@ -49,50 +60,71 @@
         font-family: Montserrat, Helvetica, "Trebuchet MS", Arial, sans-serif;
         font-size: 4.2rem;
         font-weight: bold;
-        text-shadow: -4px 6px 0px black;
         text-shadow: 0 0 10px black;
         padding-left: 30px;
         padding-right: 30px;
     }
     .people {
-      background-color: white;
       width: 100%;
     }
     .people .person {
       font-family: Lato, Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;
       font-display: swap;
       color: black;
+      background-color: white;
       text-align: left;
       padding: 40px;
-      margin: 40px 0 40px 0;
-      max-width: 720px;
+      margin: 20px 0 20px 0;
       margin-left: auto;
       margin-right: auto;
+      border: 1px solid #f6f6f6;
+      border-radius: 2px;
+      box-shadow: 0 4px 4px -4px rgb(189, 189, 189);
       transition: transform .5s;
     }
     .people .person:hover {
       transform: translate(-2px, -2px);
     }
-    .people .person h3 {
-      font-size: 1.43rem;
-    }
-    .people .person h3:first-child {
+    .people .person h2 {
       font-size: 1.5rem;
       font-weight: bold;
-      padding-bottom: 15px;
       margin-top: 15px;
+    }
+    .people .person h3 {
+      font-size: 1.3rem;
+      padding-bottom: 15px;
+    }
+    .people .person p {
+      font-size: 1.2rem;
     }
     .person img {
       width: 100%;
-      max-width: 250px;
+      max-width: 230px;
+      clip-path: circle();
+    }
+
+    @media (min-width: 1200px) {
+      .container {
+        max-width: 1100px !important;
+      }
+    }
+    @media (max-width: 767px) {
+      .people .person {
+        text-align: center;
+      }
+    }
+    @media (min-width: 992px) {
+      .people .person .col-md-4 {
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
   <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="navbar-1">
     <div class="container" style="max-width: 1200px;">
-      <a class="navbar-brand" href="#" title="Scroll to top">
-        <svg style="height: 33px; margin-top: 5px" viewBox="0 0 450.56 104.82" height="33" xmlns="http://www.w3.org/2000/svg">
+      <a class="navbar-brand" href="../" title="Scroll to top">
+        <svg id="brand" style="margin-top: 5px;" viewBox="0 0 450.56 104.82" height="33" xmlns="http://www.w3.org/2000/svg">
           <title>HackBI</title>
           <g id="Icon">
             <path d="M93.67,83.67A10.47,10.47,0,0,1,83.21,94.15H17A10.48,10.48,0,0,1,6.48,83.67V17.31A10.48,10.48,0,0,1,17,6.83H83.21A10.47,10.47,0,0,1,93.67,17.31Z" transform="translate(-5.23 -5.58)" style="fill:#fff2a6"></path>
@@ -110,7 +142,7 @@
             <path d="M69.17,37.92C73,36.44,71,22.12,67.91,19.53c0,0-11.59-2.25-19.86,2.59C48.05,22.12,60.52,27.71,69.17,37.92Z" transform="translate(-5.23 -5.58)" style="fill:#e07380;stroke:#000;stroke-miterlimit:10"></path>
             <path d="M93.67,83.67A10.47,10.47,0,0,1,83.21,94.15H17A10.48,10.48,0,0,1,6.48,83.67V17.31A10.48,10.48,0,0,1,17,6.83H83.21A10.47,10.47,0,0,1,93.67,17.31Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2.5px"></path>
           </g>
-          <g id="Text">
+          <g id="Text" style="fill: white">
             <path d="M154,14.63h14.61V87.37H154V57H127V87.37H112.41V14.63H127V42.48h27Z" transform="translate(-5.23 -5.58)"></path>
             <polygon points="206.62 9.16 197.58 9.16 167.03 82.04 182.7 82.04 201.6 39.8 219.01 82.04 234.77 82.04 206.62 9.16"></polygon>
             <path d="M286.39,32.07C272.2,23,250.8,31.45,250.8,50.86c0,20.34,22.65,28.5,36.42,18.17l9.39,10.64a38.22,38.22,0,0,1-24.21,8.67,37.75,37.75,0,0,1-37.88-37.48c0-20.65,17-37.47,37.88-37.47a38.4,38.4,0,0,1,23.38,8Z" transform="translate(-5.23 -5.58)"></path>
@@ -120,6 +152,12 @@
           </g>
         </svg>
       </a>
+      <!--
+      <a href="register" class="btn btn-light btn-md text-nowrap cta d-md-none a-colored" id="cta-collapsed">
+        Register
+        <span class="cta-arrow" data-stuff="➝">❯</span>
+      </a>
+      -->
       <button class="hamburger hamburger--squeeze navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
@@ -128,94 +166,341 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="../">Home</a>
+          </li>
+          <!--
+          <li class="nav-item">
+            <a class="nav-link" href="../register">Register</a>
+          </li>
+          -->
+          <li class="nav-item">
+            <a class="nav-link" href="../#faq">FAQ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#faq">FAQ</a>
+            <a class="nav-link" href="../#contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link active" href="">Team<span class="sr-only">(current page)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="team.html">Team<span class="sr-only">(current page)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Last Year</a>
+            <a class="nav-link" href="https://hackbi-iii.devpost.com/">Last Year</a>
           </li>
         </ul>
       </div>
+      <!--
+      <a href="register" class="btn btn-light btn-md text-nowrap cta d-none d-md-block a-colored" id="cta-uncollapsed">
+        Register
+        <span class="cta-arrow" data-stuff="➝">❯</span>
+      </a>
+      -->
     </div>
   </nav>
 
   <div class="jumbotron center">
 		<div class="container container-fluid">
-			<h1>Meet the HackBI Team</h1>
+			<h1>Meet the Team</h1>
 		</div>
 	</div>
 
-  <div class="people">
+  <div class="people container">
     <div class="row person">
-      <div class="col-sm-6 col-xs-12">
-        <img data-src="img/william.JPG"/>
+      <div class="col-md-4 col-xs-12">
+        <img data-src=""/>
       </div>
-      <div class="col-sm-6 col-xs-12">
-        <h3>William Mueller</h3>
-        <h3>Will is in charge of everything. I can't really say anything about him–he has a tendency to make people disappear without reason.</h3>
+      <div class="col-md-8 col-xs-12">
+        <h2>Critter Johnson</h2>
+        <h3>HackBI IV Leader</h3>
+        <p>Text</p>
       </div>
     </div>
     <div class="row person">
-      <div class="col-sm-6 col-xs-12">
-        <img data-src="img/franky.JPG"/>
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/jomar.jpg"/>
       </div>
-      <div class="col-sm-6 col-xs-12">
-        <h3>Franky Padilla Coo</h3>
-        <h3>Franky is helping with everything. Last year, she worked with the middle schoolers. For some reason, she didn't want to do that again.</h3>
-      </div>
-    </div>
-    <div class="row person">
-      <div class="col-sm-6 col-xs-12">
-        <img data-src="img/alexa.jpg">
-      </div>
-      <div class="col-sm-6 col-xs-12">
-        <h3>Critter Johnson</h3>
-        <h3>Critter has an Amazon Echo. If you need to talk to him, he responds to "Alexa."
-        </h3>
+      <div class="col-md-8 col-xs-12">
+        <h2>Jomar Roque</h2>
+        <h3>Admin Team Leader</h3>
+        <p>Text</p>
       </div>
     </div>
     <div class="row person">
-      <div class="col-sm-6 col-xs-12">
-        <img data-src="img/gaby.jpg">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/cameron.jpg"/>
       </div>
-      <div class="col-sm-6 col-xs-12">
-        <h3>Gaby Garcia</h3>
-        <h3>Gaby is keeping our social media up to date. Well...up to month.</h3>
-      </div>
-    </div>
-    <div class="row person">
-      <div class="col-sm-6 col-xs-12">
-        <img data-src="img/max.jpg"/>
-      </div>
-      <div class="col-sm-6 col-xs-12">
-        <h3>Max Dodson</h3>
-        <h3>Max maintains the website. Don't waste your time finding the easter egg he hid on this page.</h3>
+      <div class="col-md-8 col-xs-12">
+        <h2>Cameron Arnold</h2>
+        <h3>Admin Team Leader</h3>
+        <p>Cameron is a junior at BI and also one the leaders of the HackBI IV Admin team! Her favorite food is the snack that smiles back and Baby Mario is her go to Mario Kart character. Worried about The Office leaving Netflix next year? Well, you’re in luck! Ask her to recite Season 4 Episode 13 (the iconic “Dinner Party”) —she knows the entire episode from memory! Catch her at the Women in Science workshop!</p>
       </div>
     </div>
     <div class="row person">
-      <div class="col-sm-6 col-xs-12">
-        <img data-src="img/wali.jpeg"/>
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/lian.jpg"/>
       </div>
-      <div class="col-sm-6 col-xs-12">
-        <h3>Wali Shaikh</h3>
-        <h3>Wali is in charge of food. You might want to bring your own, just in case.</h3>
+      <div class="col-md-8 col-xs-12">
+        <h2>Lian Amond</h2>
+        <h3>Admin Team</h3>
+        <p>Lian is a senior at BI and is programming the Meet the Team page. Some wise words from Lian: “I’ve never done anything with computer science but I’m figuring it out.” (mood) Nevertheless, A+++ for effort!</p>
       </div>
     </div>
     <div class="row person">
-      <div class="col-sm-6 col-xs-12">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/joseph.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Joseph Charuhas</h2>
+        <h3>Admin Team</h3>
+        <p>Joseph is a junior at BI and is also in charge of the HackBI website! Joseph makes electronic music on his computer—will HackBI IV be having its very own DJ? Looks like we might be needing one (see Natalie and Sarah’s bios). When he’s not raving or contemplating life at the Potomac River, you can find Joseph at the HTML / CSS or JavaScript workshops!</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/natalie.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Natalie Ramirez</h2>
+        <h3>Admin Team</h3>
+        <p>Natalie is a junior and is helping run the Beginner Java and Alice workshops! She has experience in Java, HTML, and CSS. Catch her on the slopes, on the field, or in a pool— she loves snowboarding, field hockey , and swim! Natalie can rap all of “Can’t Hold Us,” and may be one of the contenders for HackBI IV’s official rapper (see Sarah’s bio).</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/matt.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Matt Lorenzo</h2>
+        <h3>Admin Team</h3>
+        <p>BrotherBear, aka Matt, is a senior at BI and is also a part of the Admin team. (No he does not know why his username for almost EVERYTHING is BrotherBear, but according to Matt “we’ll roll with it”). He’s currently on that Valorant grind and claims to have only lost one game of NBA 2k ever. Anyone looking to challenge that? Stop by the GitHub workshop! He also claims the title as “Biggest Uzi stan you will meet” and loves sneakers. (Although you can’t see them in this picture).</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/maeve.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Maeve Chawk</h2>
+        <h3>Admin Team</h3>
+        <p>Maeve is a junior at BI and will be running the Alice and App Inventor workshops! More importantly, “I have really soft hair :)” -Maeve 2020.</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
         <img data-src="img/david.jpg"/>
       </div>
-      <div class="col-sm-6 col-xs-12">
-        <h3>David Burdick</h3>
-        <h3>David is helping with the middle school hackathon. Wish him luck.</h3>
+      <div class="col-md-8 col-xs-12">
+        <h2>David Burdick</h2>
+        <h3>Admin Team</h3>
+        <p>This is David’s second HackBI, and this year he’s part of the Admin team. His favorite color is blue (baby blue, to be specific) and he helped make the workshop section of the website. David is also proud to admit he likes pineapple on pizza “(don’t judge me)”… you can debate what pizza toppings are valid if you stop by his App Inventor workshop!</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src=""/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Jack Ambery</h2>
+        <h3>Logistics Team Leader</h3>
+        <p>Text</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/kieran.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Kieran Kelleher</h2>
+        <h3>Logistics Team</h3>
+        <p>Kieran, a junior at BI and proud member of the Logistics team, seems to live a double triple life as a Minecraft Gamer™, business man(?) and elite soccer and track player. Here, you can see Kieran in one of his many disguises. Have any questions about HackBI IV’s very own Clark Kent? Make sure you stop by the Minecraft Command Blocks workshop!</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/joe.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Joe Lis</h2>
+        <h3>Logistics Team</h3>
+        <p>Text</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/laura.jpg">
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Laura Segura</h2>
+        <h3>Logistics Team</h3>
+        <p>Laura Segura is a senior at Bishop Ireton High School (no way 😮) and is a member of the XC and track teams despite having a deep hatred for running. She also really likes Ethiopian food and Colombia (as a whole). She is biological twins with Wilson from Castaway (identical obv) and her two goals in life are to speak a language from every continent (she had three down so far) and try a dish from every country. Talk to Laura Segura about every Netflix series she’s watched at the Snap Workshop! Did I mention she likes Colombia? According to Laura: “I’m the Hispanic version of Sam lee.”</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/arthur.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Arthur Seng</h2>
+        <h3>Logistics Team</h3>
+        <p>Text</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src=""/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>John Olson</h2>
+        <h3>Logistics Team</h3>
+        <p>Text</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/dagny.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Dagny Scannell</h2>
+        <h3>Logistics Team</h3>
+        <p>Dagny is a senior at BI and likes belting Broadway songs. If you’ve ever been to a BITA show, you can definitely confirm this! Have you ever wondered what would happen if you let a bunch of crickets loose on a skyscraper? Well don’t ask Dagny because she’s terrified of both crickets and heights. To end on a better note, (haha see what I did there) Dagny is 100% confident in the fact that Disney really is the happiest place on Earth.</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/sam.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Sam Lee</h2>
+        <h3>Logistics Team</h3>
+        <p>Text</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/caleb.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Caleb Finamore</h2>
+        <h3>Marketing Team Leader</h3>
+        <p>Caleb Michael Finamore is a senior at BI and is the leader of the Marketing Team! As you can see, Caleb prefers extra BIG Cheez-Its and knows how to strike a pose. (📸 creds to an undisclosed source). When he’s not using Photoshop, you can find Caleb on that Rocket League and Minecraft grind. He’s also one of Ireton’s Finest™ BIBVS goalies—you can’t miss him on the field. Like. Literally. The highlighter yellow and pink kits with matching bright orange cleats will forever be iconic. If you want to see his graphic design skills in action make sure to visit the Advanced Photoshop and Design Principles workshops!</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/alex.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Alex Cuenco-Olaya</h2>
+        <h3>Marketing Team</h3>
+        <p>Alex is a senior at BI. As a member of the marketing team this year, she’s made the sponsorship packet and, as you can tell from the photo, is currently writing these bios! (Dark mode FTW). If you were in her AP Lang class you’d know how much she loves Minecraft—and Photoshop! Mrs. Briody’s Image Editing class? 10/10 would recommend. She also thinks it’s kind of weird to write about herself in third person so I’m just gonna stop here. Hope everyone liked their bios!</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/caro.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Caroline Czarnecki</h2>
+        <h3>Marketing Team</h3>
+        <p>Caro is a senior at BI and is this years SCA President (congrats!!). This is her first year participating in HackBI and is part of the marketing team! She loves fishing, painting, and can kickbox (so don’t mess with her.) If Caro was an emoji she’d def be 🌞. Make sure to find Caro at the Photoshop workshop!</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/sarah.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Sarah Fleming</h2>
+        <h3>Marketing Team</h3>
+        <p>Sarah is a junior at BI and loves soccer, swim, and snowboarding. (Hmmm. I wonder if she’d get along with Natalie 🧐) Oddly enough, they both claim to know all the words to “Can’t Hold Us,” (a certified banger, I approve.) Should we expect a rap battle at HackBI IV? Either way, this is her second year on the team and she’s really excited!</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/julia.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Julia Lin</h2>
+        <h3>Marketing Team</h3>
+        <p>Text</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/janet.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Janet Le</h2>
+        <h3>Marketing Team</h3>
+        <p>She’s just a small-time girl living in a lonelyyy worlddd—wait wrong intro. Actually, Janet’s just a girl who’s a part of the marketing team for Hack BI IV! You’ll see her at the VEX competition or wandering around the school searching for coffee. Janet also has the best handwriting and calligraphy skills at Ireton. Wanna see for yourself? Come visit the Design Principles workshop!</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src=""/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Tiffany Nguyen</h2>
+        <h3>Marketing Team</h3>
+        <p>Text</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/gabby.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Gabby Nguyen</h2>
+        <h3>Marketing Team</h3>
+        <p>Gabby is a junior at BI and can pretty much do it all! She plays field hockey for BI and for a club, swam with a USA team competitively for 9 years , and plays the clarinet, piano, and bass guitar. As a member of the marketing team, she’s putting her photographer skills to good use! Fun fact: Her interest in coding began in the sixth grade!</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/courtney.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Courtney Quinn</h2>
+        <h3>Middle School Team Leader</h3>
+        <p>Courtney is a junior at BI and is the leader of the Middle School team this year! This will be her second year as a part of the HackBI team. I’m sure she’s super excited! Some super fun facts about Courtney (that could be related?): she’s cracked her head open and is left handed! If you want to hear the backstory then swing by the Women in Science workshop!</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/matthew.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Matthew Burdick</h2>
+        <h3>Middle School Team</h3>
+        <p>Matthew is a senior at BI and is part of the Middle School team! His favorite food is pad Thai and his favorite color is green. Matthew may or may not be part of the other pair of twins on the HackBI IV team. (and may or may not be the twin with a better taste in foods. (Sorry David.)) “Aliens are going to conquer the earth”- Matthew Burdick 2020</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/christian.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Christian Rockwell</h2>
+        <h3>Middle School Team</h3>
+        <p>Text</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/maria.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Maria Mateo</h2>
+        <h3>Middle School Team</h3>
+        <p>Text</p>
+      </div>
+    </div>
+    <div class="row person">
+      <div class="col-md-4 col-xs-12">
+        <img data-src=""/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Luke Pilot</h2>
+        <h3>Middle School Team</h3>
+        <p>Text</p>
       </div>
     </div>
   </div>
@@ -226,19 +511,22 @@
         Bishop Ireton High School
       </a>
       <br>
-      <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"  target="_blank" rel="nofollow">MLH Code of Conduct</a>
+      <a href="conduct" rel="nofollow">Conduct</a>
       <br>
       <a class="social" href="https://www.facebook.com/officialhackbi/" target="_blank">
-        <img data-src="img/facebook.svg" title="Facebook">
+        <img data-src="../img/facebook.svg" title="Facebook">
+      </a>
+      <a class="social" href="https://www.instagram.com/hackbiofficial/" target="_blank" rel="noopener">
+        <img data-src="../img/instagram.svg" title="Instagram">
       </a>
       <a class="social" href="https://www.twitter.com/HackBIOfficial" target="_blank">
-        <img data-src="img/twitter.svg" title="Twitter">
+        <img data-src="../img/twitter.svg" title="Twitter">
       </a>
       <a class="social" href="https://pbs.twimg.com/media/DYX2hoVWsAIMxvN.jpg" target="_blank">
-        <img data-src="img/snapchat.svg" title="Snapchat">
+        <img data-src="../img/snapchat.svg" title="Snapchat">
       </a>
       <a class="social" href="https://youtu.be/EZ1UAPTvYns" target="_blank">
-        <img data-src="img/youtube.svg" title="YouTube">
+        <img data-src="../img/youtube.svg" title="YouTube">
       </a>
     </div>
   </div>
@@ -247,7 +535,6 @@
   <script type="text/javascript" src="common.js"></script>
   <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script defer src="jquery.lazyloadxt.js"></script>
-  <script defer src="img/util.js"></script>
 
   </body>
   </html>

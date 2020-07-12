@@ -60,7 +60,7 @@ $(document).ready(function() {
     if (window.location.hash) {
 		var target = window.location.hash;
 		var $target = $(target);
-		var nav = $('.navbar').height();
+		var nav = 54;
 		$('html, body').stop().animate({'scrollTop': $target.offset().top - nav - 35}, 900, 'swing');
 	}
 

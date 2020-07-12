@@ -12,14 +12,14 @@
 @font-face {
 	font-family: 'Lato';
 	font-style: normal;
-	font-weight: 400;
+	font-weight: normal;
 	font-display: swap;
 	src: local('Lato Regular'), local('Lato-Regular'), url(fonts/Lato-Regular.ttf) format('truetype');
 }
 @font-face {
 	font-family: 'Lato';
 	font-style: normal;
-	font-weight: 700;
+	font-weight: bold;
 	font-display: swap;
 	src: local('Lato Bold'), local('Lato-Bold'), url(fonts/Lato-Bold.ttf) format('truetype');
 }
@@ -33,7 +33,7 @@ html {
 }
 
 body {
-	background-color: #f7f8f9;
+	background-color: #fafbfc;
 	color: black;
 	font-family: Lato, Geneva, Helvetica, Verdana, Tahoma, Arial, sans-serif;
 	overflow-x: hidden;
@@ -65,7 +65,14 @@ a:not(.a-colored), a:hover:not(.a-colored), a:focus:not(.a-colored), a:active:no
 	transition: all 0.3s;
 }
 .bg-light {
-	box-shadow: 0 0 5px #8f8f8f;
+	box-shadow: 0 0 5px #919090;
+	background-color: white !important;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #19191a !important;
+}
+.navbar-nav {
+	padding-top: 2px;
 }
 
 /* 
@@ -208,7 +215,6 @@ video {
 #lead2 {
 	font-weight: bold;
 	font-family: Montserrat, Verdana, Tahoma, Helvetica, Geneva, Arial, sans-serif; 
-	font-weight: normal;
 	font-size: 40px;
 	margin-top: 3px;
 	text-shadow: 0 0 7px black;
@@ -259,14 +265,16 @@ video {
 }
 .cta:hover .cta-arrow {
 	padding-left: 4px;
-	transform: scaleX(1.4);
+	transform: scaleY(.9) scaleX(1.3);
 	transform-origin: left center;
+	font-weight: lighter;
 }
 .cta-arrow {
-	padding-left: 2px;
+	padding-left: 3px;
 	display: inline-block;
-	transition: all 0.25s;
-	transform: scaleY(1.1) scaleX(1.1);
+	transition: all 0.25s ease-out;
+	transform: scaleY(.9);
+	transform-origin: left center;
 }
 
 #arrow {
@@ -317,7 +325,7 @@ video {
 
 .faq {
 	text-align: center;
-	background-color: #f7f8f9;
+	background-color: #fafbfc;
 }
 .faq a {
 	color: #202124;
@@ -328,31 +336,31 @@ video {
 	color: #202124;
 	text-align: left;
 	background-color: white;
-	border: 1px solid #f0f0f0;
-	border-radius: 1px;
+	border-radius: 2px;
 	padding: 40px;
 	margin: 40px 0 40px 0;
-	border-bottom: 3px solid rgb(84, 116, 219);
+	border: 1px solid #f6f6f6;
+	border-bottom: 2.5px solid rgb(84, 116, 219);
 	border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
-	box-shadow: 0 4px 4px -4px rgb(105, 105, 105);
+	box-shadow: 0 4px 4px -4px rgb(173, 173, 173);
 }
 .faq .qa:hover {
 	transform: translate(-5px, -5px);
 }
 .faq .qa h4 {
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 }
 .faq .qa h3:first-child {
 	color: #202124;
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	font-weight: bold;
 	padding-bottom: 15px;
 	margin-top: 0;
 }
 
 .workshops {
-	background-color: #f7f8f9;
+	background-color: #fafbfc;
 	padding-bottom: 60px;
 }
 
@@ -374,6 +382,9 @@ video {
 .card img {
 	margin: 15px auto 5px auto;
 	height: auto;
+}
+.card-title {
+	word-wrap: normal;
 }
 
 .card-overlay {
@@ -409,7 +420,7 @@ video {
 }
 
 .contact {
-	background-color: #f7f8f9;
+	background-color: #fafbfc;
 	color: white !important;
 }
 .contact h1 {
@@ -419,7 +430,7 @@ video {
 	text-align: center;
 	color: #202124 !important;
 	text-shadow: none;
-	padding: 35px 10px 30px 10px;
+	padding: 0 10px 30px 10px;
 }
 
 .form-control {
@@ -435,8 +446,8 @@ video {
 
 .sponsors {
 	color: black !important;
-	background-color: #f8f9fa;
-	padding-bottom: 10px;
+	background-color: #fafbfc;
+	padding-bottom: 30px;
 }
 
 .img-responsive {
@@ -485,7 +496,7 @@ a.social :hover {
 .social img {
 	height: 35px;
 	width: auto;
-	margin-top: 5px;
+	margin-top: 10px;
 }
 
 @media screen and (max-width: 370px) {
@@ -508,6 +519,9 @@ a.social :hover {
 		width: 36%;
 		margin-left: 15px;
 		margin-right: 15px;
+	}
+	.card {
+		font-size: 22px;
 	}
 	.card-columns {
 		column-count: 2;
@@ -564,34 +578,11 @@ a.social :hover {
 	.card-columns {
 		column-count: 3;
 	}
-	.navbar.bg-light .nav-link.active::after {
-		display: block;
-		border-bottom: 2px solid rgba(0,0,0,.9);
-		content: "";
-		margin-top: 2px;
-		width: 75%;
-		border-radius: 2px;
-		margin-left: auto;
-		margin-right: auto;
+	.navbar.bg-light .nav-link.active {
+		border-bottom: 2.5px solid rgb(55, 61, 66);
 	}
-	.navbar.bg-light .nav-item.active::after {
-		display: block;
-		content: "";
-		width: 100%;
-		border-top: 3px solid black;
-		/* border-top-left-radius: 3px; */
-		/* border-top-right-radius: 3px; */
-		margin: 8px auto -10px auto;
-	}
-	.navbar.bg-transparent .nav-link.active::after {
-		display: block;
-		border-bottom: 2px solid white;
-		content: "";
-		margin-top: 2px;
-		width: 75%;
-		border-radius: 2px;
-		margin-left: auto;
-		margin-right: auto;
+	.navbar.bg-transparent .nav-link.active {
+		border-bottom: 2.5px solid white;
 	}
 	.contact-container {
 		max-width: 768px;
