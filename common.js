@@ -75,3 +75,53 @@ $(document).ready(function() {
 		$('html, body').stop().animate({'scrollTop': $target.offset().top - nav - 35}, 900, 'swing');
 	});
 });
+
+function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+function validateName(name) {
+    const re = /^[a-zA-Z-]{2,}(\s[a-zA-Z-]{2,})+$/;
+    return re.test(String(name).toLowerCase());
+}
+
+function validateField(item) {
+	try {
+		var field = item.field;
+		var text = item.field.val();
+		var type = item.type;
+		var validated = false;
+		if (type == "name") {
+			if (!validateName(text)) {
+				field.removeClass('is-valid');
+				field.addClass('is-invalid');
+				field.unbind();
+				field.on("input", () => validateField({field: field, type: "name"}));
+			}
+			else {
+				field.removeClass('is-invalid');
+				field.addClass('is-valid');
+				return true;
+			}
+		}
+		else if (type == "email") {
+			if (!validateEmail(text)) {
+				field.removeClass('is-valid');
+				field.addClass('is-invalid');
+				field.unbind();
+				field.on("input", () => validateField({field: field, type: "email"}));
+			}
+			else {
+				field.removeClass('is-invalid');
+				field.addClass('is-valid');
+				return true;
+			}
+		}
+		else {
+			return false;
+		}
+	} catch {
+		return false;
+	}
+}
